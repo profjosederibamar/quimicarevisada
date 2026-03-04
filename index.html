@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Química Revisada — Revisão de Química para o ENEM</title>
+    <meta name="description"
+        content="Química Revisada: sua plataforma gratuita de revisão de Química para o ENEM. Vídeos de revisão, resumos e simulados interativos.">
+    <meta name="keywords" content="química, ENEM, revisão, vídeo aulas, simulado, vestibular, resumo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <i class="fas fa-flask"></i>
+                <span>Química<span class="accent">Revisada</span></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#conteudos" class="nav-link">Conteúdos</a></li>
+                <li><a href="#videos" class="nav-link">Vídeos</a></li>
+                <li><a href="#simulados" class="nav-link">Simulados</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content reveal">
+            <div class="hero-badge">🎯 Foco total no ENEM</div>
+            <h1>Revise <span class="gradient-text">Química</span> e garanta sua vaga no <span
+                    class="gradient-text">ENEM</span></h1>
+            <p class="hero-subtitle">Vídeos de revisão objetivos e diretos ao ponto, resumos dos conteúdos que mais caem
+                e simulados interativos para você treinar. Tudo 100% gratuito!</p>
+            <div class="hero-actions">
+                <a href="#videos" class="btn btn-primary"><i class="fas fa-play"></i> Assistir Revisões</a>
+                <a href="#simulados" class="btn btn-outline"><i class="fas fa-clipboard-check"></i> Fazer Simulado</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="30">0</span>+
+                    <span class="stat-label">Vídeos de Revisão</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="18">0</span>+
+                    <span class="stat-label">Questões ENEM</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="7">0</span>
+                    <span class="stat-label">Temas Cobertos</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-molecule">
+            <svg viewBox="0 0 200 200" class="molecule-svg">
+                <circle cx="100" cy="60" r="14" class="atom atom-1" />
+                <circle cx="60" cy="120" r="10" class="atom atom-2" />
+                <circle cx="140" cy="120" r="10" class="atom atom-3" />
+                <circle cx="100" cy="160" r="8" class="atom atom-4" />
+                <line x1="100" y1="60" x2="60" y2="120" class="bond" />
+                <line x1="100" y1="60" x2="140" y2="120" class="bond" />
+                <line x1="60" y1="120" x2="100" y2="160" class="bond" />
+                <line x1="140" y1="120" x2="100" y2="160" class="bond" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ============ CONTEÚDOS QUE CAEM NO ENEM ============ -->
+    <section class="section section-alt" id="conteudos">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-bullseye"></i> O que cai no ENEM</span>
+                <h2>Conteúdos <span class="gradient-text">Essenciais</span></h2>
+                <p class="section-desc">Os temas de Química mais cobrados no ENEM. Clique em cada card para ir direto à
+                    revisão em vídeo.</p>
+            </div>
+            <div class="conteudos-grid">
+                <a href="#videos" class="conteudo-card reveal">
+                    <div class="card-number">01</div>
+                    <div class="card-icon-wrap" style="--card-hue: 160;">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>Atomística e Tabela Periódica</h3>
+                    <p>Modelos atômicos, número atômico, número de massa, íons, isótopos e propriedades periódicas.</p>
+                    <span class="card-cta">Ver revisão <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="#videos" class="conteudo-card reveal">
+                    <div class="card-number">02</div>
+                    <div class="card-icon-wrap" style="--card-hue: 255;">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>Ligações Químicas</h3>
+                    <p>Iônica, covalente e metálica. Geometria molecular, polaridade e forças intermoleculares.</p>
+                    <span class="card-cta">Ver revisão <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="#videos" class="conteudo-card reveal">
+                    <div class="card-number">03</div>
+                    <div class="card-icon-wrap" style="--card-hue: 0;">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Estequiometria</h3>
+                    <p>Balanceamento, mol, massa molar, cálculos estequiométricos, rendimento e pureza.</p>
+                    <span class="card-cta">Ver revisão <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="#videos" class="conteudo-card reveal">
+                    <div class="card-number">04</div>
+                    <div class="card-icon-wrap" style="--card-hue: 35;">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Soluções e Concentrações</h3>
+                    <p>Concentração comum, molaridade, diluição, mistura de soluções e propriedades coligativas.</p>
+                    <span class="card-cta">Ver revisão <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="#videos" class="conteudo-card reveal">
+                    <div class="card-number">05</div>
+                    <div class="card-icon-wrap" style="--card-hue: 200;">
+                        <i class="fas fa-fire-alt"></i>
+                    </div>
+                    <h3>Termoquímica</h3>
+                    <p>Entalpia, Lei de Hess, energia de ligação, processos endo e exotérmicos.</p>
+                    <span class="card-cta">Ver revisão <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="#videos" class="conteudo-card reveal">
+                    <div class="card-number">06</div>
+                    <div class="card-icon-wrap" style="--card-hue: 50;">
+                        <i class="fas fa-car-battery"></i>
+                    </div>
+                    <h3>Eletroquímica</h3>
+                    <p>Pilhas, eletrólise, potencial de redução, oxi-redução e aplicações no cotidiano.</p>
+                    <span class="card-cta">Ver revisão <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="#videos" class="conteudo-card reveal">
+                    <div class="card-number">07</div>
+                    <div class="card-icon-wrap" style="--card-hue: 130;">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Química Orgânica</h3>
+                    <p>Funções orgânicas, nomenclatura, reações orgânicas, petróleo e polímeros.</p>
+                    <span class="card-cta">Ver revisão <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VÍDEOS DE REVISÃO ============ -->
+    <section class="section" id="videos">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-play-circle"></i> Revisão em vídeo</span>
+                <h2>Vídeos de <span class="gradient-text">Revisão</span></h2>
+                <p class="section-desc">Revisões rápidas e objetivas para cada tema. Assista, revise e arrase no ENEM!
+                </p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="video-filters reveal">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="atomistica">Atomística</button>
+                <button class="filter-btn" data-filter="ligacoes">Ligações</button>
+                <button class="filter-btn" data-filter="estequiometria">Estequiometria</button>
+                <button class="filter-btn" data-filter="solucoes">Soluções</button>
+                <button class="filter-btn" data-filter="termoquimica">Termoquímica</button>
+                <button class="filter-btn" data-filter="eletroquimica">Eletroquímica</button>
+                <button class="filter-btn" data-filter="organica">Orgânica</button>
+            </div>
+
+            <div class="videos-grid" id="videosGrid">
+                <!-- Atomística -->
+                <div class="video-card reveal" data-topic="atomistica">
+                    <div class="video-thumb">
+                        <div class="video-placeholder">
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                            <span class="video-topic-badge" style="--badge-hue: 160;">Atomística</span>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Revisão: Modelos Atômicos</h3>
+                        <p>De Dalton a Bohr — tudo que o ENEM cobra sobre modelos atômicos em uma revisão completa.</p>
+                        <div class="video-meta-row">
+                            <span class="video-meta"><i class="fas fa-clock"></i> 18 min</span>
+                            <span class="video-meta"><i class="fas fa-signal"></i> Essencial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card reveal" data-topic="atomistica">
+                    <div class="video-thumb">
+                        <div class="video-placeholder">
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                            <span class="video-topic-badge" style="--badge-hue: 160;">Atomística</span>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Revisão: Tabela Periódica e Propriedades</h3>
+                        <p>Famílias, períodos, raio atômico, eletronegatividade e energia de ionização.</p>
+                        <div class="video-meta-row">
+                            <span class="video-meta"><i class="fas fa-clock"></i> 22 min</span>
+                            <span class="video-meta"><i class="fas fa-signal"></i> Essencial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ligações -->
+                <div class="video-card reveal" data-topic="ligacoes">
+                    <div class="video-thumb">
+                        <div class="video-placeholder">
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                            <span class="video-topic-badge" style="--badge-hue: 255;">Ligações</span>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Revisão: Ligações Iônica, Covalente e Metálica</h3>
+                        <p>Diferenças, propriedades e como identificar cada tipo de ligação nas questões do ENEM.</p>
+                        <div class="video-meta-row">
+                            <span class="video-meta"><i class="fas fa-clock"></i> 25 min</span>
+                            <span class="video-meta"><i class="fas fa-signal"></i> Essencial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card reveal" data-topic="ligacoes">
+                    <div class="video-thumb">
+                        <div class="video-placeholder">
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                            <span class="video-topic-badge" style="--badge-hue: 255;">Ligações</span>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Revisão: Geometria Molecular e Polaridade</h3>
+                        <p>VSEPR, geometrias, moléculas polares e apolares, forças intermoleculares.</p>
+                        <div class="video-meta-row">
+                            <span class="video-meta"><i class="fas fa-clock"></i> 20 min</span>
+                            <span class="video-meta"><i class="fas fa-signal"></i> Frequente</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estequiometria -->
+                <div class="video-card reveal" data-topic="estequiometria">
+                    <div class="video-thumb">
+                        <div class="video-placeholder">
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                            <span class="video-topic-badge" style="--badge-hue: 0;">Estequiometria</span>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Revisão: Cálculos Estequiométricos</h3>
+                        <p>Mol, massa molar, volume molar, balanceamento e cálculos passo a passo no padrão ENEM.</p>
+                        <div class="video-meta-row">
+                            <span class="video-meta"><i class="fas fa-clock"></i> 30 min</span>
+                            <span class="video-meta"><i class="fas fa-signal"></i> Essencial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soluções -->
+                <div class="video-card reveal" data-topic="solucoes">
+                    <div class="video-thumb">
+                        <div class="video-placeholder">
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                            <span class="video-topic-badge" style="--badge-hue: 35;">Soluções</span>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Revisão: Concentração e Diluição</h3>
+                        <p>Molaridade, concentração comum, diluição (C₁V₁ = C₂V₂) e mistura de soluções.</p>
+                        <div class="video-meta-row">
+                            <span class="video-meta"><i class="fas fa-clock"></i> 24 min</span>
+                            <span class="video-meta"><i class="fas fa-signal"></i> Frequente</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Termoquímica -->
+                <div class="video-card reveal" data-topic="termoquimica">
+                    <div class="video-thumb">
+                        <div class="video-placeholder">
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                            <span class="video-topic-badge" style="--badge-hue: 200;">Termoquímica</span>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Revisão: Entalpia e Lei de Hess</h3>
+                        <p>ΔH, processos endo e exotérmicos, Lei de Hess e energia de ligação resolvidos.</p>
+                        <div class="video-meta-row">
+                            <span class="video-meta"><i class="fas fa-clock"></i> 28 min</span>
+                            <span class="video-meta"><i class="fas fa-signal"></i> Essencial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Eletroquímica -->
+                <div class="video-card reveal" data-topic="eletroquimica">
+                    <div class="video-thumb">
+                        <div class="video-placeholder">
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                            <span class="video-topic-badge" style="--badge-hue: 50;">Eletroquímica</span>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Revisão: Pilhas e Eletrólise</h3>
+                        <p>Ânodo, cátodo, potencial de redução, espontaneidade e aplicações cobradas no ENEM.</p>
+                        <div class="video-meta-row">
+                            <span class="video-meta"><i class="fas fa-clock"></i> 26 min</span>
+                            <span class="video-meta"><i class="fas fa-signal"></i> Frequente</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orgânica -->
+                <div class="video-card reveal" data-topic="organica">
+                    <div class="video-thumb">
+                        <div class="video-placeholder">
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                            <span class="video-topic-badge" style="--badge-hue: 130;">Orgânica</span>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Revisão: Funções Orgânicas</h3>
+                        <p>Álcool, aldeído, cetona, ácido, éster, amina e amida — identifique todas rapidamente.</p>
+                        <div class="video-meta-row">
+                            <span class="video-meta"><i class="fas fa-clock"></i> 32 min</span>
+                            <span class="video-meta"><i class="fas fa-signal"></i> Essencial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card reveal" data-topic="organica">
+                    <div class="video-thumb">
+                        <div class="video-placeholder">
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                            <span class="video-topic-badge" style="--badge-hue: 130;">Orgânica</span>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Revisão: Petróleo, Polímeros e Reações</h3>
+                        <p>Destilação fracionada, polímeros, esterificação e saponificação no contexto do ENEM.</p>
+                        <div class="video-meta-row">
+                            <span class="video-meta"><i class="fas fa-clock"></i> 28 min</span>
+                            <span class="video-meta"><i class="fas fa-signal"></i> Frequente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SIMULADOS ============ -->
+    <section class="section section-alt" id="simulados">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-clipboard-check"></i> Teste seus conhecimentos</span>
+                <h2>Simulado <span class="gradient-text">ENEM</span></h2>
+                <p class="section-desc">Questões no estilo ENEM para você treinar e chegar preparado na prova.</p>
+            </div>
+
+            <div class="quiz-container reveal" id="quizContainer">
+                <!-- Quiz Start -->
+                <div class="quiz-start" id="quizStart">
+                    <div class="quiz-start-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Pronto para testar seus conhecimentos?</h3>
+                    <p>O simulado contém <strong>10 questões</strong> de Química no estilo ENEM, sorteadas
+                        aleatoriamente. Ao final, veja sua pontuação, revise os erros com explicações detalhadas e
+                        refaça com novas questões!</p>
+                    <div class="quiz-topics">
+                        <span><i class="fas fa-atom"></i> Atomística</span>
+                        <span><i class="fas fa-link"></i> Ligações</span>
+                        <span><i class="fas fa-balance-scale"></i> Estequiometria</span>
+                        <span><i class="fas fa-flask"></i> Soluções</span>
+                        <span><i class="fas fa-fire"></i> Termoquímica</span>
+                        <span><i class="fas fa-bolt"></i> Eletroquímica</span>
+                        <span><i class="fas fa-leaf"></i> Orgânica</span>
+                    </div>
+                    <button class="btn btn-primary btn-lg" id="startQuiz">
+                        <i class="fas fa-rocket"></i> Iniciar Simulado
+                    </button>
+                </div>
+
+                <!-- Quiz Body -->
+                <div class="quiz-body" id="quizBody" style="display: none;">
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar">
+                            <div class="quiz-progress-fill" id="progressFill"></div>
+                        </div>
+                        <span class="quiz-progress-text" id="progressText">1 / 10</span>
+                    </div>
+                    <div class="quiz-question" id="quizQuestion">
+                        <div class="question-header">
+                            <span class="question-number" id="questionNumber">Questão 1</span>
+                            <span class="question-topic" id="questionTopic">Tema</span>
+                        </div>
+                        <p class="question-text" id="questionText"></p>
+                        <div class="question-options" id="questionOptions"></div>
+                    </div>
+                    <div class="quiz-nav">
+                        <button class="btn btn-outline" id="prevQuestion" disabled>
+                            <i class="fas fa-arrow-left"></i> Anterior
+                        </button>
+                        <button class="btn btn-primary" id="nextQuestion">
+                            Próxima <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="btn btn-primary btn-finish" id="finishQuiz" style="display: none;">
+                            <i class="fas fa-check-circle"></i> Finalizar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Results -->
+                <div class="quiz-results" id="quizResults" style="display: none;">
+                    <div class="results-icon" id="resultsIcon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 id="resultsTitle">Parabéns!</h3>
+                    <div class="results-score">
+                        <div class="score-circle" id="scoreCircle">
+                            <svg viewBox="0 0 120 120">
+                                <circle cx="60" cy="60" r="52" class="score-bg" />
+                                <circle cx="60" cy="60" r="52" class="score-fill" id="scoreFillCircle" />
+                            </svg>
+                            <span class="score-text" id="scoreText">0%</span>
+                        </div>
+                    </div>
+                    <p class="results-detail" id="resultsDetail"></p>
+                    <div class="results-actions">
+                        <button class="btn btn-primary" id="retryQuiz">
+                            <i class="fas fa-redo"></i> Refazer Simulado
+                        </button>
+                        <button class="btn btn-outline" id="reviewQuiz">
+                            <i class="fas fa-search"></i> Revisar Respostas
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Review -->
+                <div class="quiz-review" id="quizReview" style="display: none;">
+                    <h3><i class="fas fa-clipboard-list"></i> Revisão das Respostas</h3>
+                    <div class="review-list" id="reviewList"></div>
+                    <div class="review-actions">
+                        <button class="btn btn-outline" id="backToResults">
+                            <i class="fas fa-arrow-left"></i> Voltar
+                        </button>
+                        <button class="btn btn-primary" id="retryFromReview">
+                            <i class="fas fa-redo"></i> Refazer Simulado
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#hero" class="nav-logo">
+                        <i class="fas fa-flask"></i>
+                        <span>Química<span class="accent">Revisada</span></span>
+                    </a>
+                    <p>Sua plataforma gratuita de revisão de Química para o ENEM. Revise, pratique e conquiste sua vaga!
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#conteudos">Conteúdos</a></li>
+                        <li><a href="#videos">Vídeos de Revisão</a></li>
+                        <li><a href="#simulados">Simulados</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="mailto:contato@quimicarevisada.com"><i class="fas fa-envelope"></i>
+                                contato@quimicarevisada.com</a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Química Revisada. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
