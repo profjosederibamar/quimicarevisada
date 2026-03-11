@@ -121,10 +121,18 @@ const TRILHAS = [
     videos: [
       {
         id: "eletro-01",
-        youtubeId: "ID_DO_VIDEO",
-        title: "Revisão: Pilhas e Eletrólise",
-        description: "Ânodo, cátodo, potencial de redução, espontaneidade e aplicações.",
+        youtubeId: "4anogFFC_BI",
+        title: "Revisão: Pilhas Eletroquímicas",
+        description: "Ânodo, cátodo, potencial de redução, espontaneidade e pilha de Daniell.",
         duration: "26 min",
+        difficulty: "Essencial"
+      },
+      {
+        id: "eletro-02",
+        youtubeId: "NnA2x4YAylQ",
+        title: "Revisão: Eletrólise",
+        description: "Eletrólise ígnea e aquosa, leis de Faraday e aplicações industriais.",
+        duration: "28 min",
         difficulty: "Frequente"
       }
     ]
@@ -556,18 +564,6 @@ const VIDEO_QUESTIONS = {
       explanation: "ΔE° = E°(cátodo) − E°(ânodo). Se o resultado for positivo, a reação é espontânea (pilha funciona)."
     },
     {
-      text: "A eletrólise é um processo onde:",
-      options: [
-        "Energia elétrica é produzida por reação química espontânea.",
-        "Energia elétrica é usada para forçar uma reação química não espontânea.",
-        "Não há troca de energia.",
-        "Dois metais reagem espontaneamente.",
-        "Apenas gases são produzidos."
-      ],
-      answer: 1,
-      explanation: "A eletrólise usa corrente elétrica para forçar uma reação não espontânea (ΔG > 0). É o processo inverso da pilha."
-    },
-    {
       text: "Na pilha de Daniell, o zinco (E° = −0,76 V) serve como ânodo porque:",
       options: [
         "Tem maior potencial de redução que o cobre.",
@@ -590,6 +586,80 @@ const VIDEO_QUESTIONS = {
       ],
       answer: 2,
       explanation: "A ponte salina permite a migração de íons entre as duas meias-células, mantendo a neutralidade elétrica de cada solução e fechando o circuito internamente."
+    },
+    {
+      text: "Em uma pilha, o cátodo é o eletrodo onde ocorre a:",
+      options: [
+        "Oxidação (perda de elétrons).",
+        "Dissolução do metal.",
+        "Redução (ganho de elétrons).",
+        "Produção de gás hidrogênio.",
+        "Neutralização ácido-base."
+      ],
+      answer: 2,
+      explanation: "No cátodo ocorre a REDUÇÃO (ganho de elétrons). Lembre: Cátodo = Redução. O metal do cátodo se deposita conforme recebe elétrons do ânodo."
+    }
+  ],
+  "eletro-02": [
+    {
+      text: "A eletrólise é um processo que utiliza:",
+      options: [
+        "Reações espontâneas para gerar eletricidade.",
+        "Corrente elétrica para forçar uma reação química não espontânea.",
+        "Apenas reações de neutralização.",
+        "Energia solar para decompor substâncias.",
+        "Combustão para gerar energia."
+      ],
+      answer: 1,
+      explanation: "A eletrólise usa energia elétrica (corrente contínua) para forçar reações químicas que NÃO ocorreriam espontaneamente. É o processo inverso da pilha."
+    },
+    {
+      text: "Na eletrólise ígnea do NaCl fundido, os produtos obtidos no cátodo e no ânodo são, respectivamente:",
+      options: [
+        "Cloro (Cl₂) e sódio metálico (Na).",
+        "Sódio metálico (Na) e cloro (Cl₂).",
+        "Hidrogênio (H₂) e oxigênio (O₂).",
+        "Água e cloreto de hidrogênio.",
+        "Óxido de sódio e ácido clorídrico."
+      ],
+      answer: 1,
+      explanation: "No cátodo (redução): Na⁺ + e⁻ → Na (sódio metálico). No ânodo (oxidação): 2Cl⁻ → Cl₂ + 2e⁻ (gás cloro). O sódio se deposita no cátodo e o cloro é liberado no ânodo."
+    },
+    {
+      text: "Na eletrólise aquosa de uma solução de NaCl (salmoura), o produto obtido no cátodo é:",
+      options: [
+        "Sódio metálico (Na).",
+        "Gás cloro (Cl₂).",
+        "Gás hidrogênio (H₂).",
+        "Hidróxido de sódio sólido.",
+        "Oxigênio (O₂)."
+      ],
+      answer: 2,
+      explanation: "Na eletrólise AQUOSA, a água é mais facilmente reduzida que o Na⁺. No cátodo: 2H₂O + 2e⁻ → H₂ + 2OH⁻. Gás hidrogênio é liberado e forma-se NaOH em solução."
+    },
+    {
+      text: "A principal diferença entre a eletrólise ígnea e a eletrólise aquosa é que:",
+      options: [
+        "A ígnea usa corrente alternada e a aquosa usa corrente contínua.",
+        "Na ígnea, o composto está fundido (sem água); na aquosa, está dissolvido em água.",
+        "A ígnea só funciona com ametais.",
+        "A aquosa ocorre em temperaturas abaixo de 0°C.",
+        "Não há diferença entre elas."
+      ],
+      answer: 1,
+      explanation: "Na eletrólise ígnea, o composto iônico está fundido (estado líquido puro, sem água). Na aquosa, está dissolvido em água, e a água pode competir nas reações dos eletrodos."
+    },
+    {
+      text: "A galvanoplastia (cromagem, douração) é uma aplicação industrial da:",
+      options: [
+        "Pilha de Daniell.",
+        "Combustão.",
+        "Eletrólise.",
+        "Destilação fracionada.",
+        "Neutralização ácido-base."
+      ],
+      answer: 2,
+      explanation: "A galvanoplastia utiliza a eletrólise para depositar uma fina camada de metal (cromo, ouro, prata, níquel) sobre um objeto, protegendo-o contra corrosão ou embelezando-o."
     }
   ],
   "org-01": [
