@@ -85,11 +85,115 @@ const TRILHAS = [
     videos: [
       {
         id: "sol-01",
-        youtubeId: "ID_DO_VIDEO",
-        title: "Revisão: Concentração e Diluição",
-        description: "Molaridade, concentração comum, diluição (C₁V₁ = C₂V₂) e mistura.",
-        duration: "24 min",
+        youtubeId: "r8YyJLfuYpM",
+        title: "Perdendo o Medo de Soluções — Ep 01",
+        description: "Introdução a soluções: mistura homogênea, soluto, solvente e classificações.",
+        duration: "15 min",
+        difficulty: "Essencial"
+      },
+      {
+        id: "sol-02",
+        youtubeId: "ZdeDtZ9alBk",
+        title: "Perdendo o Medo de Soluções — Ep 02",
+        description: "Coeficiente de solubilidade e curvas de solubilidade.",
+        duration: "14 min",
+        difficulty: "Essencial"
+      },
+      {
+        id: "sol-03",
+        youtubeId: "ZRkLPNm_T_8",
+        title: "Colóides: Uma Visão Completa",
+        description: "Sistemas coloidais, efeito Tyndall, sol, gel e emulsão.",
+        duration: "12 min",
         difficulty: "Frequente"
+      },
+      {
+        id: "sol-04",
+        youtubeId: "WorXRPZqjeI",
+        title: "Vidrarias de Laboratório",
+        description: "Principais vidrarias e equipamentos usados no preparo de soluções.",
+        duration: "10 min",
+        difficulty: "Complementar"
+      },
+      {
+        id: "sol-05",
+        youtubeId: "ej1DiGo0N0o",
+        title: "Diluição de Soluções",
+        description: "Conceito de diluição e uso da fórmula C₁V₁ = C₂V₂.",
+        duration: "13 min",
+        difficulty: "Essencial"
+      },
+      {
+        id: "sol-06",
+        youtubeId: "tDJQjYYND2A",
+        title: "Mistura de Soluções: Solutos Iguais",
+        description: "Como calcular a concentração ao misturar soluções de mesmo soluto.",
+        duration: "11 min",
+        difficulty: "Frequente"
+      },
+      {
+        id: "sol-07",
+        youtubeId: "5Y19aC5tZQs",
+        title: "Titulação Ácido-Base",
+        description: "Procedimento de titulação, ponto de equivalência e indicadores.",
+        duration: "16 min",
+        difficulty: "Essencial"
+      },
+      {
+        id: "sol-08",
+        youtubeId: "edflEPN9-7Y",
+        title: "Dica 1: Saturada, Insaturada e Supersaturada",
+        description: "Classificação de soluções quanto à quantidade de soluto.",
+        duration: "8 min",
+        difficulty: "Essencial"
+      },
+      {
+        id: "sol-09",
+        youtubeId: "sShI6t-8zkM",
+        title: "Dica 2: Unidades de Concentração",
+        description: "Concentração comum (g/L), molaridade (mol/L) e título.",
+        duration: "10 min",
+        difficulty: "Essencial"
+      },
+      {
+        id: "sol-10",
+        youtubeId: "zh05AqbnY6Q",
+        title: "Dissolução ou Diluição?",
+        description: "Diferença entre dissolver um soluto e diluir uma solução pronta.",
+        duration: "9 min",
+        difficulty: "Frequente"
+      },
+      {
+        id: "sol-11",
+        youtubeId: "auGAGT92Ooc",
+        title: "Dica 4: Unidades de Soluções",
+        description: "Molalidade, fração molar, ppm e conversão entre unidades.",
+        duration: "12 min",
+        difficulty: "Frequente"
+      },
+      {
+        id: "sol-12",
+        youtubeId: "aGADEgwQDtc",
+        title: "Soluções: Saturada, Insaturada ou Supersaturada!",
+        description: "Revisão completa com exercícios sobre classificação de soluções.",
+        duration: "14 min",
+        difficulty: "Essencial"
+      },
+      {
+        id: "sol-13",
+        youtubeId: "Hm2ckXkJnIE",
+        title: "Soluções: Agora a Gente Aprende!",
+        description: "Revisão geral de soluções com resolução de exercícios do ENEM.",
+        duration: "18 min",
+        difficulty: "Essencial"
+      },
+      {
+        id: "sol-14",
+        youtubeId: "t_lTRmOIDz8",
+        title: "Unidades de Concentração — Você Vai Achar Fácil!",
+        description: "Resumo completo e prático de todas as unidades de concentração.",
+        duration: "20 min",
+        difficulty: "Essencial"
       }
     ]
   },
@@ -121,7 +225,7 @@ const TRILHAS = [
     videos: [
       {
         id: "eletro-01",
-        youtubeId: "4anogFFC_BI",
+        youtubeId: "NnA2x4YAylQ",
         title: "Revisão: Reações de Oxirredução",
         description: "Introdução ao Nox, transferência de elétrons e identificação de agentes.",
         duration: "25 min",
@@ -129,7 +233,7 @@ const TRILHAS = [
       },
       {
         id: "eletro-02",
-        youtubeId: "NnA2x4YAylQ",
+        youtubeId: "4anogFFC_BI",
         title: "Revisão: Pilhas Eletroquímicas",
         description: "Ânodo, cátodo, potencial de redução, ddp e a importância da ponte salina.",
         duration: "26 min",
@@ -440,46 +544,692 @@ const VIDEO_QUESTIONS = {
   ],
   "sol-01": [
     {
-      text: "A concentração molar (molaridade) de uma solução é definida como:",
+      text: "Uma solução é definida como:",
       options: [
-        "Massa do soluto dividida pelo volume da solução em litros.",
-        "Número de mols do soluto dividido pelo volume da solução em litros.",
-        "Volume do soluto dividido pelo volume do solvente.",
-        "Massa do soluto dividida pela massa do solvente.",
-        "Número de elétrons do soluto por litro."
+        "Uma mistura heterogênea de duas substâncias.",
+        "Uma mistura homogênea formada por soluto e solvente.",
+        "Uma substância pura em estado líquido.",
+        "Qualquer mistura que contenha água.",
+        "Um composto iônico dissolvido em óleo."
       ],
       answer: 1,
-      explanation: "Molaridade (M) = n/V, onde n é o número de mols do soluto e V é o volume da solução em litros."
+      explanation: "Solução é uma mistura HOMOGÊNEA de duas ou mais substâncias. O componente em maior quantidade é o solvente e o em menor quantidade é o soluto."
     },
     {
-      text: "Ao dissolver 117 g de NaCl (MM = 58,5 g/mol) em água até completar 2 litros de solução, a concentração molar é:",
-      options: ["0,5 mol/L", "1,0 mol/L", "2,0 mol/L", "4,0 mol/L", "0,25 mol/L"],
-      answer: 1,
-      explanation: "n = 117 / 58,5 = 2 mols. M = n/V = 2/2 = 1,0 mol/L."
-    },
-    {
-      text: "Se diluímos uma solução usando a fórmula C₁V₁ = C₂V₂, o que acontece com a concentração ao adicionar água?",
+      text: "Em uma solução de sal de cozinha dissolvido em água, o soluto e o solvente são, respectivamente:",
       options: [
-        "Aumenta proporcionalmente.",
-        "Permanece constante.",
-        "Diminui, pois o volume aumenta e o soluto permanece o mesmo.",
-        "O soluto precipita.",
-        "O volume diminui."
+        "Água e sal.", "Sal e água.", "Ambos são solutos.",
+        "Ambos são solventes.", "Nenhum deles, pois não é solução."
+      ],
+      answer: 1,
+      explanation: "O sal (NaCl) é o soluto (componente em menor quantidade) e a água é o solvente (componente em maior quantidade, também chamado de solvente universal)."
+    },
+    {
+      text: "Uma solução aquosa de açúcar é classificada como:",
+      options: [
+        "Mistura heterogênea.", "Substância composta.",
+        "Mistura homogênea (solução verdadeira).",
+        "Suspensão.", "Colóide."
       ],
       answer: 2,
-      explanation: "Ao adicionar água (diluir), o volume da solução aumenta, mas a quantidade de soluto permanece a mesma. Logo, a concentração diminui."
+      explanation: "Açúcar dissolvido em água forma uma mistura homogênea (uma única fase visível), classificada como solução verdadeira."
     },
     {
-      text: "100 mL de uma solução de NaOH 4 mol/L são diluídos para 400 mL. A nova concentração é:",
-      options: ["1 mol/L", "2 mol/L", "0,5 mol/L", "4 mol/L", "8 mol/L"],
-      answer: 0,
-      explanation: "C₁V₁ = C₂V₂ → 4 × 100 = C₂ × 400 → C₂ = 400/400 = 1 mol/L."
-    },
-    {
-      text: "A concentração comum (C) de uma solução é expressa em:",
-      options: ["mol/L", "g/L", "g/mL", "mol/mL", "%"],
+      text: "Sobre soluções aquosas, é CORRETO afirmar que:",
+      options: [
+        "A água nunca pode ser solvente de gases.",
+        "Soluções podem ser formadas por sólido, líquido ou gás dissolvidos em um solvente.",
+        "Toda solução é necessariamente líquida.",
+        "O soluto é sempre o componente em maior quantidade.",
+        "Soluções não conduzem corrente elétrica."
+      ],
       answer: 1,
-      explanation: "A concentração comum (C) é a razão entre a massa do soluto (em gramas) e o volume da solução (em litros): C = m/V, medida em g/L."
+      explanation: "Soluções podem ter solutos nos três estados: sólido (sal em água), líquido (álcool em água) ou gasoso (CO₂ em água = refrigerante)."
+    },
+    {
+      text: "O ar atmosférico é um exemplo de:",
+      options: [
+        "Substância pura simples.", "Mistura heterogênea.",
+        "Solução gasosa (mistura homogênea de gases).",
+        "Colóide.", "Suspensão."
+      ],
+      answer: 2,
+      explanation: "O ar é uma mistura homogênea de gases (N₂, O₂, Ar, CO₂, etc.), portanto é uma solução gasosa."
+    }
+  ],
+  "sol-02": [
+    {
+      text: "O coeficiente de solubilidade (Cs) indica:",
+      options: [
+        "A massa de solvente necessária para dissolver 1 g de soluto.",
+        "A quantidade máxima de soluto que pode ser dissolvida em uma quantidade fixa de solvente, a uma dada temperatura.",
+        "A velocidade com que o soluto se dissolve.",
+        "A densidade da solução.",
+        "O pH da solução resultante."
+      ],
+      answer: 1,
+      explanation: "O Cs indica a quantidade máxima de soluto que se dissolve em uma quantidade padrão de solvente (geralmente 100 g de água) a uma determinada temperatura."
+    },
+    {
+      text: "Para a maioria dos sólidos, ao aumentar a temperatura da água, a solubilidade:",
+      options: [
+        "Diminui sempre.", "Permanece constante.",
+        "Aumenta.", "Primeiro aumenta, depois diminui.",
+        "Não tem relação com a temperatura."
+      ],
+      answer: 2,
+      explanation: "Para a maioria dos sólidos, a solubilidade AUMENTA com o aumento da temperatura, pois a agitação molecular facilita a dissolução."
+    },
+    {
+      text: "A curva de solubilidade é um gráfico que relaciona:",
+      options: [
+        "Concentração e pH.", "Volume e pressão.",
+        "Coeficiente de solubilidade e temperatura.",
+        "Massa molar e densidade.", "Ponto de fusão e pressão."
+      ],
+      answer: 2,
+      explanation: "A curva de solubilidade é um gráfico Cs × T (coeficiente de solubilidade em função da temperatura) que mostra como a solubilidade varia."
+    },
+    {
+      text: "Se a 60°C o Cs de um sal é 40 g/100 g de água e eu dissolvi 30 g em 100 g de água a 60°C, a solução é:",
+      options: [
+        "Saturada.", "Supersaturada.", "Insaturada.",
+        "Impossível de classificar.", "Heterogênea."
+      ],
+      answer: 2,
+      explanation: "A solução é insaturada porque a quantidade de soluto (30 g) é MENOR que o coeficiente de solubilidade (40 g). Ainda cabe mais soluto."
+    },
+    {
+      text: "Para gases dissolvidos em líquidos, a solubilidade AUMENTA com:",
+      options: [
+        "Aumento da temperatura.", "Diminuição da pressão.",
+        "Aumento da pressão e diminuição da temperatura.",
+        "Redução do volume do solvente.", "Adição de outro soluto."
+      ],
+      answer: 2,
+      explanation: "Para gases, a solubilidade aumenta com o AUMENTO da pressão (Lei de Henry) e a DIMINUIÇÃO da temperatura. Por isso refrigerantes quentes perdem gás mais rápido."
+    }
+  ],
+  "sol-03": [
+    {
+      text: "Um colóide (ou dispersão coloidal) é:",
+      options: [
+        "Uma mistura heterogênea com partículas visíveis a olho nu.",
+        "Uma solução verdadeira com partículas menores que 1 nm.",
+        "Um sistema com partículas entre 1 nm e 1000 nm, intermediário entre solução e suspensão.",
+        "Um tipo de substância pura.", "Uma mistura que sempre se separa por filtração."
+      ],
+      answer: 2,
+      explanation: "Colóides têm partículas de tamanho intermediário (1–1000 nm), maiores que em soluções verdadeiras mas menores que em suspensões. Parecem homogêneos a olho nu."
+    },
+    {
+      text: "O efeito Tyndall é observado em:",
+      options: [
+        "Soluções verdadeiras.", "Substâncias puras.",
+        "Dispersões coloidais, pela dispersão de um feixe de luz.",
+        "Apenas suspensões.", "Apenas misturas gasosas."
+      ],
+      answer: 2,
+      explanation: "O efeito Tyndall é a dispersão da luz ao atravessar um colóide. As partículas coloidais são grandes o suficiente para desviar a luz, diferenciando-o de uma solução verdadeira."
+    },
+    {
+      text: "Leite é um exemplo de colóide do tipo:",
+      options: ["Sol.", "Gel.", "Emulsão.", "Aerossol.", "Espuma."],
+      answer: 2,
+      explanation: "O leite é uma emulsão (líquido disperso em líquido). Gotículas de gordura estão dispersas na água do leite."
+    },
+    {
+      text: "A neblina é um exemplo de colóide classificado como:",
+      options: ["Emulsão.", "Gel.", "Espuma.", "Aerossol líquido.", "Sol."],
+      answer: 3,
+      explanation: "A neblina é um aerossol líquido: gotículas de água (líquido) dispersas no ar (gás)."
+    },
+    {
+      text: "A gelatina, quando pronta, é classificada como um colóide do tipo:",
+      options: ["Aerossol.", "Emulsão.", "Sol.", "Gel.", "Espuma sólida."],
+      answer: 3,
+      explanation: "A gelatina é um GEL: um sistema coloidal onde um sólido forma uma rede tridimensional que aprisiona o líquido (água)."
+    }
+  ],
+  "sol-04": [
+    {
+      text: "Para medir com PRECISÃO o volume de uma solução durante o preparo, devemos usar:",
+      options: [
+        "Béquer.", "Erlenmeyer.", "Balão volumétrico.",
+        "Proveta.", "Tubo de ensaio."
+      ],
+      answer: 2,
+      explanation: "O balão volumétrico é a vidraria mais precisa para medir e preparar soluções com volume exato. Possui um traço de aferição no gargalo."
+    },
+    {
+      text: "A bureta é uma vidraria utilizada principalmente em:",
+      options: [
+        "Aquecimento de soluções.", "Armazenamento de reagentes.",
+        "Titulações, para adicionar volume preciso de solução.",
+        "Filtração a vácuo.", "Destilação simples."
+      ],
+      answer: 2,
+      explanation: "A bureta é usada em titulações para adicionar volumes precisos e controlados de solução titulante, gotejando lentamente."
+    },
+    {
+      text: "O Erlenmeyer é um frasco cônico usado em laboratório. Sua principal vantagem é:",
+      options: [
+        "Medir volumes com alta precisão.",
+        "Permite agitar soluções sem derramar facilmente.",
+        "É usado apenas para armazenar sólidos.",
+        "Suporta temperaturas acima de 1000°C.", "Serve como conta-gotas."
+      ],
+      answer: 1,
+      explanation: "O formato cônico do Erlenmeyer permite agitar o líquido em seu interior sem que ele derrame facilmente, sendo ideal para titulações e reações."
+    },
+    {
+      text: "Para transferir líquidos entre frascos com segurança, utiliza-se como vidraria auxiliar:",
+      options: [
+        "Cadinho.", "Funil de vidro.", "Dessecador.",
+        "Condensador.", "Cápsula de porcelana."
+      ],
+      answer: 1,
+      explanation: "O funil de vidro é utilizado para transferir líquidos entre recipientes e também para realizar filtrações simples com papel de filtro."
+    },
+    {
+      text: "A pipeta volumétrica é utilizada para:",
+      options: [
+        "Aquecer soluções.", "Pesar substâncias sólidas.",
+        "Medir e transferir um volume fixo e preciso de líquido.",
+        "Armazenar ácidos concentrados.", "Medir a temperatura."
+      ],
+      answer: 2,
+      explanation: "A pipeta volumétrica mede e transfere um ÚNICO volume fixo com alta precisão (ex: 10,00 mL, 25,00 mL). Diferente da pipeta graduada, que mede volumes variáveis."
+    }
+  ],
+  "sol-05": [
+    {
+      text: "Diluir uma solução significa:",
+      options: [
+        "Adicionar mais soluto à solução.",
+        "Adicionar solvente à solução, reduzindo sua concentração.",
+        "Aquecer a solução para evaporar o solvente.",
+        "Misturar duas soluções diferentes.",
+        "Filtrar a solução para remover impurezas."
+      ],
+      answer: 1,
+      explanation: "Diluir é adicionar SOLVENTE (geralmente água) a uma solução pronta. A quantidade de soluto não muda, mas o volume aumenta, então a concentração diminui."
+    },
+    {
+      text: "A fórmula utilizada para cálculos de diluição é:",
+      options: [
+        "C = m/V", "n = m/MM", "C₁V₁ = C₂V₂",
+        "PV = nRT", "pH = -log[H⁺]"
+      ],
+      answer: 2,
+      explanation: "C₁V₁ = C₂V₂ expressa que a quantidade de soluto se mantém constante na diluição. C₁ e V₁ são a concentração e volume iniciais; C₂ e V₂ são os finais."
+    },
+    {
+      text: "200 mL de uma solução 2 mol/L é diluída para 800 mL. A nova concentração é:",
+      options: ["0,25 mol/L", "0,5 mol/L", "1 mol/L", "4 mol/L", "8 mol/L"],
+      answer: 1,
+      explanation: "C₁V₁ = C₂V₂ → 2 × 200 = C₂ × 800 → C₂ = 400/800 = 0,5 mol/L."
+    },
+    {
+      text: "Ao diluir uma solução, o que permanece CONSTANTE?",
+      options: [
+        "A concentração.", "O volume da solução.",
+        "A quantidade de soluto (em mols ou gramas).",
+        "A temperatura.", "A densidade."
+      ],
+      answer: 2,
+      explanation: "Na diluição, adicionamos apenas solvente. A quantidade de soluto é a mesma antes e depois — só o volume muda, alterando a concentração."
+    },
+    {
+      text: "Um farmacêutico precisa preparar 500 mL de soro fisiológico a 0,9 g/L a partir de uma solução estoque a 9 g/L. O volume da solução estoque necessário é:",
+      options: ["5 mL", "50 mL", "100 mL", "250 mL", "450 mL"],
+      answer: 1,
+      explanation: "C₁V₁ = C₂V₂ → 9 × V₁ = 0,9 × 500 → V₁ = 450/9 = 50 mL de solução estoque, completando com água até 500 mL."
+    }
+  ],
+  "sol-06": [
+    {
+      text: "Ao misturar duas soluções de MESMO soluto, a concentração final é:",
+      options: [
+        "Sempre a soma das concentrações.",
+        "Sempre a média aritmética das concentrações.",
+        "Calculada por (C₁V₁ + C₂V₂) / (V₁ + V₂).",
+        "Sempre igual à menor concentração.",
+        "Calculada por C₁ × C₂."
+      ],
+      answer: 2,
+      explanation: "Na mistura de soluções de mesmo soluto: Cf = (C₁V₁ + C₂V₂) / (V₁ + V₂). É a média ponderada das concentrações pelos volumes."
+    },
+    {
+      text: "100 mL de NaCl 2 mol/L são misturados com 300 mL de NaCl 4 mol/L. A concentração final é:",
+      options: ["1,5 mol/L", "2 mol/L", "3 mol/L", "3,5 mol/L", "6 mol/L"],
+      answer: 3,
+      explanation: "Cf = (2×100 + 4×300)/(100+300) = (200+1200)/400 = 1400/400 = 3,5 mol/L."
+    },
+    {
+      text: "Se misturarmos volumes iguais de duas soluções de mesmo soluto, uma com C₁ = 2 mol/L e outra C₂ = 6 mol/L, a concentração final será:",
+      options: ["2 mol/L", "3 mol/L", "4 mol/L", "6 mol/L", "8 mol/L"],
+      answer: 2,
+      explanation: "Com volumes iguais, Cf = (C₁ + C₂)/2 = (2+6)/2 = 4 mol/L. É a média aritmética simples."
+    },
+    {
+      text: "Na mistura de soluções de mesmo soluto, a quantidade total de soluto é:",
+      options: [
+        "A diferença dos solutos individuais.",
+        "A soma das quantidades de soluto de cada solução.",
+        "Sempre constante independente dos volumes.",
+        "O produto das concentrações.",
+        "Sempre zero."
+      ],
+      answer: 1,
+      explanation: "Ao misturar, o soluto total = n₁ + n₂ (soma dos mols). Nenhum soluto é criado ou destruído, apenas combinamos tudo no mesmo recipiente."
+    },
+    {
+      text: "200 mL de HCl 1 mol/L são misturados com 800 mL de água pura. A concentração final de HCl é:",
+      options: ["0,1 mol/L", "0,2 mol/L", "0,5 mol/L", "1 mol/L", "5 mol/L"],
+      answer: 1,
+      explanation: "Água pura tem C = 0. Cf = (1×200 + 0×800)/(200+800) = 200/1000 = 0,2 mol/L. Misturar com água é o mesmo que diluir."
+    }
+  ],
+  "sol-07": [
+    {
+      text: "A titulação ácido-base é uma técnica para determinar:",
+      options: [
+        "O ponto de fusão de uma substância.",
+        "A concentração desconhecida de um ácido ou base.",
+        "A massa molar de um composto.",
+        "A velocidade de uma reação.", "A temperatura de ebulição."
+      ],
+      answer: 1,
+      explanation: "A titulação permite determinar a concentração desconhecida de uma solução (titulado) usando uma solução de concentração conhecida (titulante)."
+    },
+    {
+      text: "O ponto de equivalência na titulação é atingido quando:",
+      options: [
+        "O pH da solução é 7.",
+        "O número de mols do ácido é igual ao número de mols da base (neutralização completa).",
+        "Todo o titulante foi consumido.",
+        "A solução muda de cor de forma permanente para vermelho.",
+        "O volume do titulante é o dobro do titulado."
+      ],
+      answer: 1,
+      explanation: "No ponto de equivalência, o número de equivalentes-grama (ou mols × valência) do ácido é igual ao da base, ocorrendo neutralização completa."
+    },
+    {
+      text: "Na titulação, o indicador (como a fenolftaleína) serve para:",
+      options: [
+        "Acelerar a reação de neutralização.",
+        "Sinalizar visualmente o ponto de equivalência pela mudança de cor.",
+        "Medir a temperatura da solução.",
+        "Aumentar a concentração do ácido.",
+        "Reduzir o pH da solução."
+      ],
+      answer: 1,
+      explanation: "O indicador ácido-base muda de cor em uma faixa de pH específica, sinalizando que o ponto de equivalência foi atingido ou ultrapassado."
+    },
+    {
+      text: "Em uma titulação, a vidraria usada para adicionar o titulante gota a gota é:",
+      options: ["Pipeta.", "Béquer.", "Bureta.", "Balão volumétrico.", "Proveta."],
+      answer: 2,
+      explanation: "A bureta é a vidraria utilizada para adicionar volumes precisos e controlados de titulante, gota a gota, durante a titulação."
+    },
+    {
+      text: "20 mL de HCl são neutralizados por 40 mL de NaOH 0,5 mol/L. A concentração do HCl é:",
+      options: ["0,25 mol/L", "0,5 mol/L", "1,0 mol/L", "2,0 mol/L", "4,0 mol/L"],
+      answer: 2,
+      explanation: "No ponto de equivalência: C_a × V_a = C_b × V_b → C_a × 20 = 0,5 × 40 → C_a = 20/20 = 1,0 mol/L."
+    }
+  ],
+  "sol-08": [
+    {
+      text: "Uma solução SATURADA é aquela que:",
+      options: [
+        "Contém pouco soluto dissolvido.",
+        "Atingiu o limite máximo de dissolução do soluto naquela temperatura.",
+        "Contém mais soluto do que o solvente pode dissolver.",
+        "Não contém soluto.", "Está em ebulição."
+      ],
+      answer: 1,
+      explanation: "Solução saturada é aquela onde o soluto atingiu o coeficiente de solubilidade — não é possível dissolver mais soluto naquela temperatura."
+    },
+    {
+      text: "Uma solução INSATURADA contém:",
+      options: [
+        "Quantidade de soluto IGUAL ao Cs.",
+        "Quantidade de soluto MAIOR que o Cs.",
+        "Quantidade de soluto MENOR que o Cs.",
+        "Corpo de fundo.", "Apenas solvente puro."
+      ],
+      answer: 2,
+      explanation: "Solução insaturada: a quantidade de soluto dissolvido é MENOR que o coeficiente de solubilidade. Ainda é possível dissolver mais soluto."
+    },
+    {
+      text: "Uma solução SUPERSATURADA é instável porque:",
+      options: [
+        "Contém menos soluto que o permitido.",
+        "Contém mais soluto dissolvido do que o Cs permite, podendo cristalizar a qualquer momento.",
+        "Está sempre em ebulição.",
+        "Nunca pode ser preparada em laboratório.",
+        "Contém dois solventes diferentes."
+      ],
+      answer: 1,
+      explanation: "Na solução supersaturada, há MAIS soluto dissolvido do que o Cs. É instável: qualquer perturbação (agitação, semente de cristal) pode causar cristalização."
+    },
+    {
+      text: "Ao adicionar soluto a uma solução saturada (com corpo de fundo), sem alterar a temperatura:",
+      options: [
+        "O soluto se dissolve totalmente.",
+        "A concentração da solução aumenta.",
+        "O corpo de fundo aumenta, pois o excesso não se dissolve.",
+        "A solução se torna insaturada.",
+        "O solvente evapora."
+      ],
+      answer: 2,
+      explanation: "Em uma solução saturada, o solvente já está no limite. Ao adicionar mais soluto, este se deposita no fundo (corpo de fundo), sem alterar a concentração."
+    },
+    {
+      text: "Para transformar uma solução saturada em insaturada (sem corpo de fundo), pode-se:",
+      options: [
+        "Diminuir a temperatura.", "Adicionar mais soluto.",
+        "Adicionar mais solvente (diluir).",
+        "Filtrar a solução.", "Congelar a solução."
+      ],
+      answer: 2,
+      explanation: "Adicionando mais solvente, a quantidade de soluto dissolvido fica abaixo do novo Cs total, tornando a solução insaturada."
+    }
+  ],
+  "sol-09": [
+    {
+      text: "A concentração comum (C) de uma solução é expressa como:",
+      options: [
+        "Número de mols por litro (mol/L).",
+        "Massa do soluto em gramas por litro de solução (g/L).",
+        "Massa do soluto por massa do solvente.",
+        "Volume do soluto por volume da solução.", "Mols por quilograma."
+      ],
+      answer: 1,
+      explanation: "Concentração comum: C = m₁/V (massa do soluto em gramas dividida pelo volume da solução em litros), expressa em g/L."
+    },
+    {
+      text: "A molaridade (M) de uma solução representa:",
+      options: [
+        "A massa do soluto por litro.", "O número de mols do soluto por litro de solução.",
+        "O volume do soluto por litro de solvente.",
+        "A massa do solvente por litro.", "A quantidade de íons por litro."
+      ],
+      answer: 1,
+      explanation: "Molaridade (M) = n/V = número de mols do soluto dividido pelo volume da solução em litros. Unidade: mol/L."
+    },
+    {
+      text: "Uma solução contém 40 g de NaOH (MM = 40 g/mol) em 500 mL de solução. Sua molaridade é:",
+      options: ["0,5 mol/L", "1,0 mol/L", "2,0 mol/L", "4,0 mol/L", "0,1 mol/L"],
+      answer: 2,
+      explanation: "n = 40/40 = 1 mol. V = 500 mL = 0,5 L. M = n/V = 1/0,5 = 2,0 mol/L."
+    },
+    {
+      text: "O título em massa (τ) de uma solução é:",
+      options: [
+        "A razão entre a massa do soluto e a massa total da solução.",
+        "A razão entre o volume do soluto e o volume do solvente.",
+        "O número de mols por litro.",
+        "A massa do solvente por litro.", "A pressão osmótica da solução."
+      ],
+      answer: 0,
+      explanation: "Título em massa: τ = m₁/m (massa do soluto / massa da solução). É adimensional e varia de 0 a 1 (ou 0% a 100%)."
+    },
+    {
+      text: "A relação entre concentração comum (C), molaridade (M) e massa molar (MM) é:",
+      options: [
+        "C = M × MM", "C = M / MM", "C = M + MM",
+        "C = MM / M", "Não existe relação entre elas."
+      ],
+      answer: 0,
+      explanation: "C = M × MM. Como C = m₁/V e M = n₁/V, e sabendo que m₁ = n₁ × MM, temos C = M × MM."
+    }
+  ],
+  "sol-10": [
+    {
+      text: "A diferença entre DISSOLUÇÃO e DILUIÇÃO é que:",
+      options: [
+        "São o mesmo processo.", 
+        "Na dissolução, adicionamos soluto ao solvente; na diluição, adicionamos solvente à solução pronta.",
+        "Na dissolução, removemos soluto; na diluição, adicionamos soluto.",
+        "Dissolução só ocorre com sólidos; diluição, com líquidos.",
+        "Dissolução é irreversível; diluição é reversível."
+      ],
+      answer: 1,
+      explanation: "Dissolução: misturar soluto + solvente para CRIAR a solução. Diluição: adicionar mais solvente a uma solução JÁ PRONTA para reduzir a concentração."
+    },
+    {
+      text: "Ao preparar um suco em pó, adicionando o pó à água, estou realizando uma:",
+      options: ["Diluição.", "Dissolução.", "Titulação.", "Destilação.", "Filtração."],
+      answer: 1,
+      explanation: "Adicionar o pó (soluto) à água (solvente) é DISSOLUÇÃO — estamos criando uma nova solução."
+    },
+    {
+      text: "Ao adicionar mais água a um suco já pronto (para ficar menos concentrado), estou realizando uma:",
+      options: ["Dissolução.", "Diluição.", "Neutralização.", "Precipitação.", "Evaporação."],
+      answer: 1,
+      explanation: "Adicionar água (solvente) a um suco JÁ PRONTO é DILUIÇÃO — estamos reduzindo a concentração sem alterar a quantidade de soluto."
+    },
+    {
+      text: "Na dissolução, a quantidade de SOLUTO:",
+      options: [
+        "Permanece constante.", "Diminui.", "Aumenta (é o soluto sendo adicionado).",
+        "É sempre zero.", "É irrelevante."
+      ],
+      answer: 2,
+      explanation: "Na dissolução, estamos justamente ADICIONANDO o soluto ao solvente, então a quantidade de soluto aumenta no sistema."
+    },
+    {
+      text: "Na diluição, o que permanece constante é:",
+      options: [
+        "A concentração.", "O volume total.",
+        "A quantidade de soluto.", "A temperatura.", "A pressão."
+      ],
+      answer: 2,
+      explanation: "Na diluição, apenas adicionamos solvente. A quantidade de soluto (em gramas ou mols) não muda — só o volume e a concentração mudam."
+    }
+  ],
+  "sol-11": [
+    {
+      text: "A molalidade (W) de uma solução é definida como:",
+      options: [
+        "Mols de soluto por litro de solução.",
+        "Mols de soluto por quilograma de SOLVENTE.",
+        "Gramas de soluto por litro de solução.",
+        "Mols de solvente por litro.", "Volume de soluto por volume de solvente."
+      ],
+      answer: 1,
+      explanation: "Molalidade (W) = n₁/m₂(kg) = número de mols do soluto dividido pela massa do SOLVENTE em quilogramas. Diferente da molaridade, que usa o volume da solução."
+    },
+    {
+      text: "A fração molar do soluto (x₁) em uma solução é:",
+      options: [
+        "A massa do soluto dividida pela massa total.",
+        "O número de mols do soluto dividido pelo número total de mols (soluto + solvente).",
+        "A concentração em g/L.",
+        "O número de mols do solvente.",
+        "A razão entre as massas molares."
+      ],
+      answer: 1,
+      explanation: "Fração molar: x₁ = n₁/(n₁ + n₂). É a razão entre os mols do soluto e os mols totais da solução. É adimensional e x₁ + x₂ = 1."
+    },
+    {
+      text: "A unidade ppm (partes por milhão) é usada para:",
+      options: [
+        "Soluções muito concentradas.", "Apenas soluções gasosas.",
+        "Soluções muito diluídas, como poluentes em água.",
+        "Medir a temperatura de soluções.", "Calcular a pressão osmótica."
+      ],
+      answer: 2,
+      explanation: "ppm é usado para concentrações muito pequenas. 1 ppm = 1 mg/L = 1 mg de soluto em 1 000 000 mg de solução. Comum para poluentes e minerais na água."
+    },
+    {
+      text: "A principal diferença entre MOLARIDADE e MOLALIDADE é que:",
+      options: [
+        "São a mesma coisa.",
+        "A molaridade usa o volume da SOLUÇÃO; a molalidade usa a massa do SOLVENTE.",
+        "A molalidade usa o volume da solução; a molaridade usa a massa do solvente.",
+        "A molaridade é medida em g/L.", "A molalidade não depende do soluto."
+      ],
+      answer: 1,
+      explanation: "Molaridade (M) = n/V(solução). Molalidade (W) = n/m(solvente em kg). A molalidade não varia com a temperatura, pois usa massa (não volume)."
+    },
+    {
+      text: "Se 2 mols de glicose estão dissolvidos em 500 g de água, a molalidade é:",
+      options: ["1 mol/kg", "2 mol/kg", "4 mol/kg", "0,5 mol/kg", "0,004 mol/kg"],
+      answer: 2,
+      explanation: "W = n₁/m₂(kg) = 2/0,5 = 4 mol/kg. (500 g = 0,5 kg de solvente)."
+    }
+  ],
+  "sol-12": [
+    {
+      text: "Se o Cs de um sal a 25°C é 36 g/100 g de água e uma solução contém 40 g desse sal em 100 g de água a 25°C, a solução é:",
+      options: [
+        "Insaturada.", "Saturada sem corpo de fundo.",
+        "Saturada com corpo de fundo.", "Supersaturada sem cristais.", "Diluída."
+      ],
+      answer: 2,
+      explanation: "40 g > 36 g (Cs). O excesso (4 g) não se dissolve e se deposita como corpo de fundo. A solução é SATURADA com corpo de fundo."
+    },
+    {
+      text: "Uma solução supersaturada pode ser obtida por:",
+      options: [
+        "Adicionando água fria ao soluto.",
+        "Dissolvendo o soluto a quente e resfriando lentamente sem perturbar.",
+        "Filtrando uma solução saturada.", "Evaporando todo o solvente.",
+        "Adicionando mais solvente."
+      ],
+      answer: 1,
+      explanation: "Dissolve-se o soluto em temperatura alta (onde o Cs é maior) e resfria-se lentamente. Sem perturbação, o excesso permanece dissolvido — supersaturação."
+    },
+    {
+      text: "O 'corpo de fundo' é:",
+      options: [
+        "O solvente que precipita.", "O excesso de soluto que não se dissolveu.",
+        "Um tipo de reação química.", "O recipiente usado para armazenar soluções.",
+        "O gás liberado durante a dissolução."
+      ],
+      answer: 1,
+      explanation: "Corpo de fundo é o excesso de soluto sólido que se deposita no fundo do recipiente quando a solução atinge a saturação."
+    },
+    {
+      text: "Ao aquecer uma solução saturada com corpo de fundo, geralmente o corpo de fundo:",
+      options: [
+        "Aumenta.", "Permanece igual.", "Se dissolve (parcial ou totalmente).",
+        "Evapora junto com o solvente.", "Muda de cor."
+      ],
+      answer: 2,
+      explanation: "Como a solubilidade geralmente aumenta com a temperatura, o corpo de fundo se dissolve parcial ou totalmente ao aquecer."
+    },
+    {
+      text: "Um ponto acima da curva de solubilidade no gráfico Cs × T representa uma solução:",
+      options: [
+        "Insaturada.", "Saturada.", "Supersaturada.",
+        "Em ebulição.", "Em equilíbrio."
+      ],
+      answer: 2,
+      explanation: "Acima da curva = mais soluto que o Cs permite = supersaturada. Na curva = saturada. Abaixo da curva = insaturada."
+    }
+  ],
+  "sol-13": [
+    {
+      text: "Uma solução aquosa de NaCl conduz corrente elétrica porque:",
+      options: [
+        "O NaCl é molecular.",
+        "Os íons Na⁺ e Cl⁻ se movem livremente em solução.",
+        "A água pura conduz eletricidade.",
+        "O sal é um isolante elétrico.",
+        "Os elétrons fluem pelo sal sólido."
+      ],
+      answer: 1,
+      explanation: "Em solução aquosa, o NaCl se dissocia em Na⁺ e Cl⁻. Esses íons livres conduzem corrente elétrica (solução eletrolítica)."
+    },
+    {
+      text: "Qual das seguintes soluções é a mais concentrada?",
+      options: [
+        "10 g de sal em 500 mL de solução.",
+        "20 g de sal em 500 mL de solução.",
+        "10 g de sal em 1000 mL de solução.",
+        "5 g de sal em 200 mL de solução.",
+        "1 g de sal em 100 mL de solução."
+      ],
+      answer: 1,
+      explanation: "C = m/V. A: 20 g/L, B: 40 g/L, C: 10 g/L, D: 25 g/L, E: 10 g/L. A solução B (40 g/L) é a mais concentrada."
+    },
+    {
+      text: "A propriedade coligativa que explica por que se adiciona sal nas estradas com gelo é:",
+      options: [
+        "Ebulioscopia.", "Tonoscopia.", "Crioscopia (abaixamento do ponto de congelamento).",
+        "Osmose.", "Pressão de vapor."
+      ],
+      answer: 2,
+      explanation: "A crioscopia é o abaixamento do ponto de congelamento. O sal dissolvido na água diminui o ponto de congelamento, derretendo o gelo."
+    },
+    {
+      text: "Em uma solução, ao aumentar a quantidade de soluto (sem ultrapassar o Cs), a concentração:",
+      options: [
+        "Permanece constante.", "Diminui.", "Aumenta.",
+        "Depende do solvente.", "Se torna zero."
+      ],
+      answer: 2,
+      explanation: "Mais soluto dissolvido em mesmo volume de solvente = maior concentração. C = m₁/V — se m₁ aumenta com V constante, C aumenta."
+    },
+    {
+      text: "A osmose é o fenômeno onde:",
+      options: [
+        "O soluto migra do meio mais concentrado para o menos concentrado.",
+        "O solvente migra do meio menos concentrado para o mais concentrado através de uma membrana semipermeável.",
+        "Todo o soluto evapora.",
+        "Os íons se neutralizam.",
+        "A pressão da solução chega a zero."
+      ],
+      answer: 1,
+      explanation: "Na osmose, o SOLVENTE passa de onde está em maior quantidade (solução diluída) para onde está em menor quantidade (solução concentrada), buscando o equilíbrio."
+    }
+  ],
+  "sol-14": [
+    {
+      text: "Qual a concentração em g/L de uma solução preparada dissolvendo 20 g de soluto em água suficiente para 250 mL de solução?",
+      options: ["40 g/L", "80 g/L", "20 g/L", "5 g/L", "100 g/L"],
+      answer: 1,
+      explanation: "C = m/V = 20 g / 0,25 L = 80 g/L."
+    },
+    {
+      text: "A molaridade de uma solução que contém 98 g de H₂SO₄ (MM = 98 g/mol) em 2 L de solução é:",
+      options: ["0,5 mol/L", "1,0 mol/L", "2,0 mol/L", "49 mol/L", "0,25 mol/L"],
+      answer: 0,
+      explanation: "n = 98/98 = 1 mol. M = n/V = 1/2 = 0,5 mol/L."
+    },
+    {
+      text: "Uma solução tem título (τ) igual a 0,05. Isso significa que:",
+      options: [
+        "5% da massa da solução é soluto.",
+        "50% da massa da solução é soluto.",
+        "O soluto representa 0,05 g.",
+        "O solvente representa 5%.",
+        "A solução está saturada."
+      ],
+      answer: 0,
+      explanation: "τ = 0,05 significa que 5% da massa total da solução é soluto. Em 100 g de solução, há 5 g de soluto e 95 g de solvente."
+    },
+    {
+      text: "Para converter concentração comum (g/L) em molaridade (mol/L), usa-se:",
+      options: [
+        "M = C × MM", "M = C / MM", "M = C + MM", "M = C - MM", "Não é possível converter."
+      ],
+      answer: 1,
+      explanation: "M = C / MM. Se C = 40 g/L e MM = 40 g/mol, então M = 40/40 = 1 mol/L."
+    },
+    {
+      text: "Uma solução de 500 mL contém 5,85 g de NaCl (MM = 58,5 g/mol). A concentração em g/L e em mol/L são, respectivamente:",
+      options: [
+        "11,7 g/L e 0,2 mol/L", "5,85 g/L e 0,1 mol/L",
+        "11,7 g/L e 0,1 mol/L", "23,4 g/L e 0,4 mol/L", "5,85 g/L e 0,2 mol/L"
+      ],
+      answer: 0,
+      explanation: "C = 5,85/0,5 = 11,7 g/L. n = 5,85/58,5 = 0,1 mol. M = 0,1/0,5 = 0,2 mol/L."
     }
   ],
   "term-01": [
