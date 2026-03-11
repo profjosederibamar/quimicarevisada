@@ -121,18 +121,18 @@ const TRILHAS = [
     videos: [
       {
         id: "eletro-01",
-        youtubeId: "4anogFFC_BI",
-        title: "Revisão: Pilhas Eletroquímicas",
-        description: "Ânodo, cátodo, potencial de redução, espontaneidade e pilha de Daniell.",
-        duration: "26 min",
+        youtubeId: "NnA2x4YAylQ",
+        title: "Revisão: Reações de Oxirredução",
+        description: "Introdução ao Nox, transferência de elétrons e identificação de agentes.",
+        duration: "25 min",
         difficulty: "Essencial"
       },
       {
         id: "eletro-02",
-        youtubeId: "NnA2x4YAylQ",
-        title: "Revisão: Eletrólise",
-        description: "Eletrólise ígnea e aquosa, leis de Faraday e aplicações industriais.",
-        duration: "28 min",
+        youtubeId: "4anogFFC_BI",
+        title: "Revisão: Pilhas Eletroquímicas",
+        description: "Ânodo, cátodo, potencial de redução, ddp e a importância da ponte salina.",
+        duration: "26 min",
         difficulty: "Frequente"
       }
     ]
@@ -546,120 +546,114 @@ const VIDEO_QUESTIONS = {
   ],
   "eletro-01": [
     {
-      text: "Em uma pilha eletroquímica, a oxidação ocorre no:",
-      options: ["Cátodo", "Eletrólito", "Fio condutor", "Ânodo", "Ponte salina"],
-      answer: 3,
-      explanation: "No ânodo ocorre a OXIDAÇÃO (perda de elétrons). Lembre: Ânodo = Oxidação. Os elétrons fluem do ânodo para o cátodo pelo fio condutor."
+      text: "O Número de Oxidação (Nox) de um elemento químico em uma substância simples (ex: O₂, Fe, H₂) é sempre:",
+      options: ["+1", "-1", "0", "+2", "Igual à sua família na Tabela Periódica"],
+      answer: 2,
+      explanation: "Por definição, o Nox de qualquer elemento em uma substância simples é zero, pois não há diferença de eletronegatividade entre os átomos."
     },
     {
-      text: "A ddp (diferença de potencial) de uma pilha é calculada por:",
+      text: "Em uma reação de oxirredução, o agente REDUTOR é a espécie química que:",
       options: [
-        "E° = E°(ânodo) − E°(cátodo)",
-        "E° = E°(ânodo) + E°(cátodo)",
-        "E° = E°(cátodo) − E°(ânodo)",
-        "E° = E°(cátodo) × E°(ânodo)",
-        "E° = E°(ânodo) / E°(cátodo)"
+        "Sofre redução e ganha elétrons.",
+        "Sofre oxidação e perde elétrons.",
+        "Não sofre alteração no seu Nox.",
+        "Aumenta a massa de um eletrodo.",
+        "Diminui sua carga elétrica total."
       ],
-      answer: 2,
-      explanation: "ΔE° = E°(cátodo) − E°(ânodo). Se o resultado for positivo, a reação é espontânea (pilha funciona)."
+      answer: 1,
+      explanation: "O agente REDUTOR causa a redução de outra espécie sofrendo OXIDAÇÃO (perda de elétrons). Quem oxida 'reduz' o outro."
     },
     {
-      text: "Na pilha de Daniell, o zinco (E° = −0,76 V) serve como ânodo porque:",
+      text: "Na reação: Zn + 2 HCl → ZnCl₂ + H₂, o zinco metálico sofreu:",
       options: [
-        "Tem maior potencial de redução que o cobre.",
-        "É mais nobre que o cobre.",
-        "Tem MENOR potencial de redução, logo oxida-se mais facilmente.",
-        "É um gás inerte.",
-        "É mais eletronegativo que o cobre."
+        "Redução, pois seu Nox diminuiu.",
+        "Oxidação, pois seu Nox aumentou de 0 para +2.",
+        "Neutralização, pois reagiu com um ácido.",
+        "Precipitação, saindo da solução.",
+        "Nenhuma alteração de carga."
       ],
-      answer: 2,
-      explanation: "O metal com MENOR potencial de redução (mais negativo) oxida-se mais facilmente e atua como ânodo. Zn (−0,76V) < Cu (+0,34V), logo Zn é o ânodo."
+      answer: 1,
+      explanation: "O zinco (Zn) passa de Nox 0 para +2, perdendo elétrons (oxidação). O hidrogênio do HCl passa de +1 para 0, ganhando elétrons (redução)."
     },
     {
-      text: "A função da ponte salina em uma pilha é:",
-      options: [
-        "Conduzir elétrons entre as soluções.",
-        "Aumentar a voltagem da pilha.",
-        "Permitir a migração de íons para manter a neutralidade elétrica das soluções.",
-        "Dissolver os eletrodos.",
-        "Aumentar a concentração do soluto."
-      ],
+      text: "Qual dos elementos abaixo possui Nox fixo igual a +1 em todos os seus compostos?",
+      options: ["Oxigênio (O)", "Hidrogênio (H)", "Metais Alcalinos (Família 1A)", "Cloro (Cl)", "Enxofre (S)"],
       answer: 2,
-      explanation: "A ponte salina permite a migração de íons entre as duas meias-células, mantendo a neutralidade elétrica de cada solução e fechando o circuito internamente."
+      explanation: "Os metais alcalinos (Líbio, Sódio, Potássio, etc.) possuem Nox fixo +1 em seus compostos. O Hidrogênio é +1 na maioria, mas pode ser -1 em hidretos metálicos."
     },
     {
-      text: "Em uma pilha, o cátodo é o eletrodo onde ocorre a:",
+      text: "Para que uma reação de oxirredução ocorra espontaneamente, é necessário que:",
       options: [
-        "Oxidação (perda de elétrons).",
-        "Dissolução do metal.",
-        "Redução (ganho de elétrons).",
-        "Produção de gás hidrogênio.",
-        "Neutralização ácido-base."
+        "Haja transferência de prótons.",
+        "O Nox dos elementos permaneça constante.",
+        "Haja transferência de elétrons entre os átomos.",
+        "Os reagentes sejam todos gasosos.",
+        "A energia de ativação seja negativa."
       ],
       answer: 2,
-      explanation: "No cátodo ocorre a REDUÇÃO (ganho de elétrons). Lembre: Cátodo = Redução. O metal do cátodo se deposita conforme recebe elétrons do ânodo."
+      explanation: "Toda reação de oxirredução é definida pela transferência de elétrons de uma espécie (que oxida) para outra (que reduz)."
     }
   ],
   "eletro-02": [
     {
-      text: "A eletrólise é um processo que utiliza:",
+      text: "Em uma pilha de Daniell (Zn/Cu), no ânodo ocorre a:",
       options: [
-        "Reações espontâneas para gerar eletricidade.",
-        "Corrente elétrica para forçar uma reação química não espontânea.",
-        "Apenas reações de neutralização.",
-        "Energia solar para decompor substâncias.",
-        "Combustão para gerar energia."
+        "Redução do cobre metálico.",
+        "Oxidação do zinco metálico perdendo elétrons.",
+        "Migração de elétrons pelo eletrólito.",
+        "Deposição de metal na placa.",
+        "Absorção de luz solar."
       ],
       answer: 1,
-      explanation: "A eletrólise usa energia elétrica (corrente contínua) para forçar reações químicas que NÃO ocorreriam espontaneamente. É o processo inverso da pilha."
+      explanation: "No ânodo das pilhas sempre ocorre a OXIDAÇÃO. No caso da pilha de Daniell, o zinco metálico se dissolve liberando elétrons e íons Zn²⁺."
     },
     {
-      text: "Na eletrólise ígnea do NaCl fundido, os produtos obtidos no cátodo e no ânodo são, respectivamente:",
+      text: "Qual a função fundamental da PONTE SALINA em uma pilha eletroquímica?",
       options: [
-        "Cloro (Cl₂) e sódio metálico (Na).",
-        "Sódio metálico (Na) e cloro (Cl₂).",
-        "Hidrogênio (H₂) e oxigênio (O₂).",
-        "Água e cloreto de hidrogênio.",
-        "Óxido de sódio e ácido clorídrico."
-      ],
-      answer: 1,
-      explanation: "No cátodo (redução): Na⁺ + e⁻ → Na (sódio metálico). No ânodo (oxidação): 2Cl⁻ → Cl₂ + 2e⁻ (gás cloro). O sódio se deposita no cátodo e o cloro é liberado no ânodo."
-    },
-    {
-      text: "Na eletrólise aquosa de uma solução de NaCl (salmoura), o produto obtido no cátodo é:",
-      options: [
-        "Sódio metálico (Na).",
-        "Gás cloro (Cl₂).",
-        "Gás hidrogênio (H₂).",
-        "Hidróxido de sódio sólido.",
-        "Oxigênio (O₂)."
+        "Conduzir os elétrons de um eletrodo para o outro.",
+        "Aumentar o potencial de oxidação dos metais.",
+        "Manter a neutralidade elétrica das soluções permitindo a migração de íons.",
+        "Impedir que a pilha aqueça demais.",
+        "Funcionar como um isolante elétrico."
       ],
       answer: 2,
-      explanation: "Na eletrólise AQUOSA, a água é mais facilmente reduzida que o Na⁺. No cátodo: 2H₂O + 2e⁻ → H₂ + 2OH⁻. Gás hidrogênio é liberado e forma-se NaOH em solução."
+      explanation: "A ponte salina permite que ânions e cátions migrem entre as cubas para equilibrar as cargas, mantendo a neutralidade elétrica e fechando o circuito."
     },
     {
-      text: "A principal diferença entre a eletrólise ígnea e a eletrólise aquosa é que:",
+      text: "A ddp (Diferença de Potencial) de uma pilha é o resultado de:",
       options: [
-        "A ígnea usa corrente alternada e a aquosa usa corrente contínua.",
-        "Na ígnea, o composto está fundido (sem água); na aquosa, está dissolvido em água.",
-        "A ígnea só funciona com ametais.",
-        "A aquosa ocorre em temperaturas abaixo de 0°C.",
-        "Não há diferença entre elas."
+        "Soma dos potenciais de redução.",
+        "Diferença entre o potencial de redução do cátodo e do ânodo (ΔE = Ecat - Ean).",
+        "Multiplicação das massas dos eletrodos.",
+        "Um valor sempre negativo para reações espontâneas.",
+        "Razão entre o volume das soluções."
       ],
       answer: 1,
-      explanation: "Na eletrólise ígnea, o composto iônico está fundido (estado líquido puro, sem água). Na aquosa, está dissolvido em água, e a água pode competir nas reações dos eletrodos."
+      explanation: "A ddp ou força eletromotriz é calculada pela diferença dos potenciais de redução: ΔE° = E°redução(maior) - E°redução(menor)."
     },
     {
-      text: "A galvanoplastia (cromagem, douração) é uma aplicação industrial da:",
+      text: "Numa pilha, o fluxo de elétrons pelo circuito externo (fio condutor) ocorre sempre:",
       options: [
-        "Pilha de Daniell.",
-        "Combustão.",
-        "Eletrólise.",
-        "Destilação fracionada.",
-        "Neutralização ácido-base."
+        "Do cátodo para o ânodo.",
+        "Das soluções para os metais.",
+        "Do ânodo para o cátodo.",
+        "No sentido da ponte salina.",
+        "De forma aleatória."
       ],
       answer: 2,
-      explanation: "A galvanoplastia utiliza a eletrólise para depositar uma fina camada de metal (cromo, ouro, prata, níquel) sobre um objeto, protegendo-o contra corrosão ou embelezando-o."
+      explanation: "Os elétrons são liberados no ânodo (oxidação) e 'puxados' pelo cátodo (redução). Portanto, o fluxo é Ânodo → Cátodo."
+    },
+    {
+      text: "Se um metal A tem E°redução = +0,80V e um metal B tem E°redução = -0,44V, ao montarmos uma pilha:",
+      options: [
+        "O metal B será o cátodo.",
+        "A ddp será de 0,36V.",
+        "O metal A sofrerá redução (será o cátodo).",
+        "A reação não será espontânea.",
+        "O metal A será o ânodo."
+      ],
+      answer: 2,
+      explanation: "O metal com maior potencial de redução (+0,80V) reduz-se (Cátodo). O metal com menor potencial (-0,44V) oxida-se (Ânodo). ΔE = 0,80 - (-0,44) = 1,24V."
     }
   ],
   "org-01": [
