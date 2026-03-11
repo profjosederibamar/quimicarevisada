@@ -19,7 +19,8 @@ const TRILHAS = [
         title: "Revisão: Modelos Atômicos",
         description: "De Dalton a Bohr — tudo que o ENEM cobra sobre modelos atômicos.",
         duration: "18 min",
-        difficulty: "Essencial"
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       },
       {
         id: "atom-02",
@@ -27,7 +28,8 @@ const TRILHAS = [
         title: "Revisão: Tabela Periódica e Propriedades",
         description: "Famílias, períodos, raio atômico, eletronegatividade e energia de ionização.",
         duration: "22 min",
-        difficulty: "Essencial"
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       }
     ]
   },
@@ -45,7 +47,8 @@ const TRILHAS = [
         title: "Revisão: Ligações Iônica, Covalente e Metálica",
         description: "Diferenças, propriedades e como identificar cada tipo de ligação.",
         duration: "25 min",
-        difficulty: "Essencial"
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       },
       {
         id: "lig-02",
@@ -53,7 +56,8 @@ const TRILHAS = [
         title: "Revisão: Geometria Molecular e Polaridade",
         description: "VSEPR, geometrias, moléculas polares e apolares, forças intermoleculares.",
         duration: "20 min",
-        difficulty: "Frequente"
+        difficulty: "Frequente",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       }
     ]
   },
@@ -71,7 +75,8 @@ const TRILHAS = [
         title: "Revisão: Cálculos Estequiométricos",
         description: "Mol, massa molar, volume molar, balanceamento e cálculos passo a passo.",
         duration: "30 min",
-        difficulty: "Essencial"
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       }
     ]
   },
@@ -90,7 +95,7 @@ const TRILHAS = [
         description: "Introdução a soluções: mistura homogênea, soluto, solvente e classificações.",
         duration: "15 min",
         difficulty: "Essencial",
-        pdfLink: "https://drive.google.com/file/d/1_PLACEHOLDER_SOL_01/preview"
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       },
       {
         id: "sol-02",
@@ -98,7 +103,8 @@ const TRILHAS = [
         title: "Perdendo o Medo de Soluções — Ep 02",
         description: "Coeficiente de solubilidade e curvas de solubilidade.",
         duration: "14 min",
-        difficulty: "Essencial"
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       },
       {
         id: "sol-03",
@@ -106,7 +112,8 @@ const TRILHAS = [
         title: "Colóides: Uma Visão Completa",
         description: "Sistemas coloidais, efeito Tyndall, sol, gel e emulsão.",
         duration: "12 min",
-        difficulty: "Frequente"
+        difficulty: "Frequente",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       },
       {
         id: "sol-04",
@@ -114,7 +121,8 @@ const TRILHAS = [
         title: "Vidrarias de Laboratório",
         description: "Principais vidrarias e equipamentos usados no preparo de soluções.",
         duration: "10 min",
-        difficulty: "Complementar"
+        difficulty: "Complementar",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       },
       {
         id: "sol-05",
@@ -122,7 +130,8 @@ const TRILHAS = [
         title: "Diluição de Soluções",
         description: "Conceito de diluição e uso da fórmula C₁V₁ = C₂V₂.",
         duration: "13 min",
-        difficulty: "Essencial"
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       },
       {
         id: "sol-06",
@@ -130,7 +139,8 @@ const TRILHAS = [
         title: "Mistura de Soluções: Solutos Iguais",
         description: "Como calcular a concentração ao misturar soluções de mesmo soluto.",
         duration: "11 min",
-        difficulty: "Frequente"
+        difficulty: "Frequente",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       },
       {
         id: "sol-07",
@@ -138,7 +148,8 @@ const TRILHAS = [
         title: "Titulação Ácido-Base",
         description: "Procedimento de titulação, ponto de equivalência e indicadores.",
         duration: "16 min",
-        difficulty: "Essencial"
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       },
       {
         id: "sol-08",
@@ -146,7 +157,8 @@ const TRILHAS = [
         title: "Dica 1: Saturada, Insaturada e Supersaturada",
         description: "Classificação de soluções quanto à quantidade de soluto.",
         duration: "8 min",
-        difficulty: "Essencial"
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       },
       {
         id: "sol-09",
@@ -154,7 +166,8 @@ const TRILHAS = [
         title: "Dica 2: Unidades de Concentração",
         description: "Concentração comum (g/L), molaridade (mol/L) e título.",
         duration: "10 min",
-        difficulty: "Essencial"
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       },
       {
         id: "sol-10",
@@ -162,7 +175,8 @@ const TRILHAS = [
         title: "Dissolução ou Diluição?",
         description: "Diferença entre dissolver um soluto e diluir uma solução pronta.",
         duration: "9 min",
-        difficulty: "Frequente"
+        difficulty: "Frequente",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       },
       {
         id: "sol-11",
@@ -170,7 +184,8 @@ const TRILHAS = [
         title: "Dica 4: Unidades de Soluções",
         description: "Molalidade, fração molar, ppm e conversão entre unidades.",
         duration: "12 min",
-        difficulty: "Frequente"
+        difficulty: "Frequente",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       },
       {
         id: "sol-12",
@@ -178,7 +193,8 @@ const TRILHAS = [
         title: "Soluções: Saturada, Insaturada ou Supersaturada!",
         description: "Revisão completa com exercícios sobre classificação de soluções.",
         duration: "14 min",
-        difficulty: "Essencial"
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       },
       {
         id: "sol-13",
@@ -186,7 +202,8 @@ const TRILHAS = [
         title: "Soluções: Agora a Gente Aprende!",
         description: "Revisão geral de soluções com resolução de exercícios do ENEM.",
         duration: "18 min",
-        difficulty: "Essencial"
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       },
       {
         id: "sol-14",
@@ -194,7 +211,8 @@ const TRILHAS = [
         title: "Unidades de Concentração — Você Vai Achar Fácil!",
         description: "Resumo completo e prático de todas as unidades de concentração.",
         duration: "20 min",
-        difficulty: "Essencial"
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       }
     ]
   },
@@ -212,7 +230,8 @@ const TRILHAS = [
         title: "Revisão: Entalpia e Lei de Hess",
         description: "ΔH, processos endo e exotérmicos, Lei de Hess e energia de ligação.",
         duration: "28 min",
-        difficulty: "Essencial"
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       }
     ]
   },
@@ -231,7 +250,7 @@ const TRILHAS = [
         description: "Introdução ao Nox, transferência de elétrons e identificação de agentes.",
         duration: "25 min",
         difficulty: "Essencial",
-        pdfLink: "https://drive.google.com/file/d/1_PLACEHOLDER_ELETRO_01/preview"
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       },
       {
         id: "eletro-02",
@@ -239,7 +258,8 @@ const TRILHAS = [
         title: "Revisão: Pilhas Eletroquímicas",
         description: "Ânodo, cátodo, potencial de redução, ddp e a importância da ponte salina.",
         duration: "26 min",
-        difficulty: "Frequente"
+        difficulty: "Frequente",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       }
     ]
   },
@@ -257,7 +277,8 @@ const TRILHAS = [
         title: "Revisão: Funções Orgânicas",
         description: "Álcool, aldeído, cetona, ácido, éster, amina e amida.",
         duration: "32 min",
-        difficulty: "Essencial"
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       },
       {
         id: "org-02",
@@ -265,7 +286,8 @@ const TRILHAS = [
         title: "Revisão: Petróleo, Polímeros e Reações",
         description: "Destilação fracionada, polímeros, esterificação e saponificação.",
         duration: "28 min",
-        difficulty: "Frequente"
+        difficulty: "Frequente",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       }
     ]
   }
@@ -993,7 +1015,7 @@ const VIDEO_QUESTIONS = {
     {
       text: "A diferença entre DISSOLUÇÃO e DILUIÇÃO é que:",
       options: [
-        "São o mesmo processo.", 
+        "São o mesmo processo.",
         "Na dissolução, adicionamos soluto ao solvente; na diluição, adicionamos solvente à solução pronta.",
         "Na dissolução, removemos soluto; na diluição, adicionamos soluto.",
         "Dissolução só ocorre com sólidos; diluição, com líquidos.",
