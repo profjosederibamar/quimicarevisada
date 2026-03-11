@@ -1038,6 +1038,9 @@ function renderFooter() {
         </div>
         <div class="footer-bottom">
           <p>&copy; 2026 Química Revisada. Todos os direitos reservados.</p>
+          <div class="visitor-counter" id="visitorCounter">
+             <i class="fas fa-chart-line"></i> <span id="visitCount">...</span> visitas
+          </div>
         </div>
       </div>
     </footer>
@@ -1078,3 +1081,38 @@ function initReveal() {
     els.forEach(el => obs.observe(el));
   }, 50);
 }
+
+// ========== VISITOR COUNTER ==========
+async function initVisitorCounter() {
+  const counterEl = document.getElementById('visitCount');
+  if (!counterEl) return;
+
+  try {
+    // Increment and get visits for this specific key
+    const response = await fetch('https://api.counterapi.dev/v1/profjosederibamar-quimicarevisada/visits/up');
+    if (!response.ok) throw new Error('Counter API error');
+    
+    const data = await response.json();
+    const count = data.count || 0;
+    
+    // Format number (e.g., 1.234)
+    counterEl.textContent = new Intl.NumberFormat('pt-BR').format(count);
+    document.getElementById('visitorCounter').classList.add('loaded');
+  } catch (err) {
+    console.error('Visitor Counter failed:', err);
+    // Hide counter if it fails to avoid showing "..."
+    if (document.getElementById('visitorCounter')) {
+        document.getElementById('visitorCounter').style.display = 'none';
+    }
+  }
+}
+
+// ========== INITIALIZATION ==========
+window.addEventListener('DOMContentLoaded', () => {
+  initParticles();
+  initVisitorCounter();
+  
+  // Navigation handling
+  handleRouting();
+  window.addEventListener('hashchange', handleRouting);
+});
