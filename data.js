@@ -89,7 +89,8 @@ const TRILHAS = [
         title: "Perdendo o Medo de Soluções — Ep 01",
         description: "Introdução a soluções: mistura homogênea, soluto, solvente e classificações.",
         duration: "15 min",
-        difficulty: "Essencial"
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1_PLACEHOLDER_SOL_01/preview"
       },
       {
         id: "sol-02",
@@ -229,7 +230,8 @@ const TRILHAS = [
         title: "Revisão: Reações de Oxirredução",
         description: "Introdução ao Nox, transferência de elétrons e identificação de agentes.",
         duration: "25 min",
-        difficulty: "Essencial"
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1_PLACEHOLDER_ELETRO_01/preview"
       },
       {
         id: "eletro-02",
@@ -1516,6 +1518,7 @@ const GAMIFICATION = {
   xpPerCorrectAnswer: 20,
   xpBonusAllCorrect: 50,
   xpBonusTrailComplete: 100,
+  xpPerMaterialAccess: 5,
   levels: [
     { name: "Iniciante", icon: "🧪", minXP: 0, color: "#8b95b0" },
     { name: "Estudante", icon: "📚", minXP: 100, color: "#00b4d8" },

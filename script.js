@@ -12,7 +12,8 @@ const DEFAULT_STATE = {
   trailProgress: {},
   achievements: [],
   quizHistory: [],
-  simuladoHighScore: 0
+  simuladoHighScore: 0,
+  materialsAccessed: {}
 };
 
 function loadState() {
@@ -520,6 +521,26 @@ function renderVideoPage(container, trailId, videoId) {
             </div>
           </div>
         </div>
+
+        ${video.pdfLink ? `
+        <div class="video-material reveal">
+          <div class="vm-card">
+            <div class="vm-icon"><i class="fas fa-file-pdf"></i></div>
+            <div class="vm-info">
+              <h3>Material de Apoio</h3>
+              <p>Resumo em PDF para aprofundar seus estudos sobre este tema.</p>
+            </div>
+            <div class="vm-actions">
+              <button class="btn btn-outline" onclick="openMaterialReader('${video.pdfLink}', '${video.id}')">
+                <i class="fas fa-book-open"></i> Modo Leitura
+              </button>
+              <a href="${video.pdfLink.replace('/preview', '/view')}" target="_blank" class="btn btn-ghost">
+                <i class="fas fa-download"></i> Baixar
+              </a>
+            </div>
+          </div>
+        </div>
+        ` : ''}
 
         ${questions.length > 0 ? `
         <div class="video-quiz reveal" id="videoQuiz">
@@ -1107,12 +1128,66 @@ async function initVisitorCounter() {
   }
 }
 
+// ========== MATERIAL READER ==========
+function openMaterialReader(url, videoId) {
+  // Create modal if it doesn't exist
+  let modal = document.getElementById('materialModal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'materialModal';
+    modal.className = 'material-modal';
+    modal.innerHTML = `
+      <div class="mm-overlay" onclick="closeMaterialReader()"></div>
+      <div class="mm-content">
+        <div class="mm-header">
+          <div class="mm-title"><i class="fas fa-book-open"></i> Modo Leitura</div>
+          <button class="mm-close" onclick="closeMaterialReader()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mm-body">
+          <iframe id="mmIframe" src="" frameborder="0"></iframe>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+  }
+
+  const iframe = document.getElementById('mmIframe');
+  iframe.src = url;
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+
+  // Award XP if first time
+  if (!state.materialsAccessed[videoId]) {
+    state.materialsAccessed[videoId] = true;
+    saveState(state);
+    setTimeout(() => {
+      addXP(GAMIFICATION.xpPerMaterialAccess);
+      showToast(`+${GAMIFICATION.xpPerMaterialAccess} XP: Material Lido!`, 'xp');
+    }, 500);
+  }
+}
+
+function closeMaterialReader() {
+  const modal = document.getElementById('materialModal');
+  if (modal) {
+    modal.classList.remove('active');
+    const iframe = document.getElementById('mmIframe');
+    if (iframe) iframe.src = ''; // Stop loading/playing
+    document.body.style.overflow = '';
+  }
+}
+
 // ========== INITIALIZATION ==========
 window.addEventListener('DOMContentLoaded', () => {
   initParticles();
   initVisitorCounter();
   
+  // Expose to global for onclick handlers
+  window.openMaterialReader = openMaterialReader;
+  window.closeMaterialReader = closeMaterialReader;
+  
   // Navigation handling
   handleRouting();
   window.addEventListener('hashchange', handleRouting);
 });
+
