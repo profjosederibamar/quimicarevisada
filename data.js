@@ -121,7 +121,7 @@ const TRILHAS = [
     videos: [
       {
         id: "eletro-01",
-        youtubeId: "NnA2x4YAylQ",
+        youtubeId: "4anogFFC_BI",
         title: "Revisão: Reações de Oxirredução",
         description: "Introdução ao Nox, transferência de elétrons e identificação de agentes.",
         duration: "25 min",
@@ -129,7 +129,7 @@ const TRILHAS = [
       },
       {
         id: "eletro-02",
-        youtubeId: "4anogFFC_BI",
+        youtubeId: "NnA2x4YAylQ",
         title: "Revisão: Pilhas Eletroquímicas",
         description: "Ânodo, cátodo, potencial de redução, ddp e a importância da ponte salina.",
         duration: "26 min",
