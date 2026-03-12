@@ -284,6 +284,58 @@ window.addEventListener('DOMContentLoaded', () => {
   router();
 });
 
+// ========== YOUTUBE TRACKING ==========
+let ytPlayer = null;
+let currentTrackingVideoId = null;
+
+function onYouTubeIframeAPIReady() {
+  console.log("YouTube IFrame API Ready");
+}
+
+function setupVideoTracking(videoId) {
+  currentTrackingVideoId = videoId;
+  
+  // If player already exists, destroy it to avoid conflicts
+  if (ytPlayer) {
+    try { ytPlayer.destroy(); } catch(e) {}
+    ytPlayer = null;
+  }
+
+  // Check if API is loaded
+  if (typeof YT === 'undefined' || typeof YT.Player === 'undefined') {
+    setTimeout(() => setupVideoTracking(videoId), 500);
+    return;
+  }
+
+  ytPlayer = new YT.Player('videoFrame', {
+    events: {
+      'onStateChange': (event) => {
+        if (event.data === YT.PlayerState.ENDED) {
+          markVideoAsWatched(currentTrackingVideoId);
+        }
+      }
+    }
+  });
+}
+
+function markVideoAsWatched(videoId) {
+  if (!state.videosCompleted[videoId]) {
+    state.videosCompleted[videoId] = true;
+    saveState(state);
+    addXP(GAMIFICATION.xpPerVideoWatch);
+    showToast(`+${GAMIFICATION.xpPerVideoWatch} XP: Vídeo assistido por completo!`, 'success');
+    
+    // Refresh trail progress in UI if on a page that shows it
+    const path = getRoute();
+    if (path.startsWith('/trilha/')) {
+       // On trail detail page, we could refresh, but since it's an overlay or separate page, it's fine
+    }
+    
+    // If the "Watch video" achievement isn't there, it will be checked next time state is reviewed
+    checkAchievements();
+  }
+}
+
 // ========== VIEWS ==========
 
 // ---------- HOME ----------
@@ -503,7 +555,8 @@ function renderVideoPage(container, trailId, videoId) {
         <div class="video-page reveal">
           <div class="video-player">
             <iframe 
-              src="https://www.youtube.com/embed/${video.youtubeId}" 
+              id="videoFrame"
+              src="https://www.youtube.com/embed/${video.youtubeId}?enablejsapi=1" 
               title="${video.title}"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -581,6 +634,7 @@ function renderVideoPage(container, trailId, videoId) {
 
   initReveal();
   initVideoQuiz(trailId, videoId, questions);
+  setupVideoTracking(videoId);
 }
 
 function initVideoQuiz(trailId, videoId, questions) {
@@ -648,11 +702,7 @@ function initVideoQuiz(trailId, videoId, questions) {
         }
       }
 
-      // Mark video as completed
-      if (!state.videosCompleted[videoId]) {
-        state.videosCompleted[videoId] = true;
-        totalXP += GAMIFICATION.xpPerVideoWatch;
-      }
+      // Quiz scores are saved, but video completion is now handled by YouTube API
       state.videoQuizScores[videoId] = correct;
 
       // Check trail complete
