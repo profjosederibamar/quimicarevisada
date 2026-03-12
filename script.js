@@ -1218,17 +1218,15 @@ Enviado via Química Revisada em ${new Date().toLocaleString('pt-BR')}
   showToast('Enviando relatório...', 'info');
 
   const templateParams = {
-    to_name: "Professor José",
-    from_name: studentName,
-    message: reportContent,
-    reply_to: "estudante@feedback.com" // Placeholder
+    nome: "Professor José",
+    título: `Relatório de Progresso: ${studentName}`,
+    nome_aluno: studentName, // Extra info
+    mensagem: reportContent  // Body of the report
   };
 
   try {
-    // Note: You need to create a template in EmailJS with these params
-    // Service ID: service_default, Template ID: template_default (or similar)
-    // For now, using the basic 'send' if allowed or standard service/template
-    const response = await emailjs.send('default_service', 'template_qrevisada', templateParams);
+    // Using the Service ID and Template ID provided by the user
+    const response = await emailjs.send('default_service', 'template_se5owkn', templateParams);
     
     if (response.status === 200) {
       showToast('✅ Relatório enviado com sucesso!', 'success');
