@@ -259,7 +259,7 @@ const TRILHAS = [
         description: "Ânodo, cátodo, potencial de redução, ddp e a importância da ponte salina.",
         duration: "26 min",
         difficulty: "Frequente",
-        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+        pdfLink: "https://drive.google.com/file/d/1gJXxrlY9WSDT5V2dD5P3FooJCmcuyHmx/preview"
       }
     ]
   },
