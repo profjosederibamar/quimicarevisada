@@ -929,9 +929,14 @@ function renderProgresso(container) {
         <div class="page-back">
           <a href="#/" class="btn-back"><i class="fas fa-arrow-left"></i> Início</a>
         </div>
-        <div class="section-header reveal">
-          <span class="section-tag"><i class="fas fa-chart-line"></i> Seu desempenho</span>
-          <h2>Meu <span class="gradient-text">Progresso</span></h2>
+        <div class="section-header reveal" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+          <div>
+            <span class="section-tag"><i class="fas fa-chart-line"></i> Seu desempenho</span>
+            <h2>Meu <span class="gradient-text">Progresso</span></h2>
+          </div>
+          <button class="btn btn-primary" onclick="sendEmailReport()" style="margin-bottom: 5px;">
+            <i class="fas fa-paper-plane"></i> Enviar para o Professor
+          </button>
         </div>
 
         <!-- Stats overview -->
@@ -1177,6 +1182,71 @@ function closeMaterialReader() {
   }
 }
 
+// ========== EMAIL REPORTING ==========
+async function sendEmailReport() {
+  const studentName = prompt("Por favor, insira seu nome completo para o relatório:") || "Estudante";
+  
+  const reportContent = `
+🎓 RELATÓRIO DE DESEMPENHO — QUÍMICA REVISADA
+--------------------------------------------------
+👤 Estudante: ${studentName}
+📊 Pontuação Total (XP): ${state.xp}
+🏆 Nível: ${getLevel(state.xp).name}
+🔥 Streak Atual: ${state.streak} dias
+📽️ Vídeos Concluídos: ${getCompletedVideosCount()}
+🏁 Trilhas Concluídas: ${getCompletedTrailsCount()}
+📈 Melhor Nota no Simulado: ${state.simuladoHighScore}%
+
+RESUMO POR TRILHA:
+--------------------------------------------------
+${TRILHAS.map(t => {
+  const tp = getTrailProgress(t.id);
+  const done = t.videos.filter(v => state.videosCompleted[v.id]).length;
+  return `• ${t.title}: ${tp}% (${done}/${t.videos.length} vídeos)`;
+}).join('\n')}
+
+ÚLTIMOS SIMULADOS:
+--------------------------------------------------
+${state.quizHistory.length > 0 
+  ? state.quizHistory.slice(-5).reverse().map(h => `• ${new Date(h.date).toLocaleDateString('pt-BR')}: ${h.score}% (${h.correct}/${h.total} acertos)`).join('\n')
+  : 'Nenhum simulado realizado ainda.'}
+
+--------------------------------------------------
+Enviado via Química Revisada em ${new Date().toLocaleString('pt-BR')}
+`;
+
+  showToast('Enviando relatório...', 'info');
+
+  const templateParams = {
+    to_name: "Professor José",
+    from_name: studentName,
+    message: reportContent,
+    reply_to: "estudante@feedback.com" // Placeholder
+  };
+
+  try {
+    // Note: You need to create a template in EmailJS with these params
+    // Service ID: service_default, Template ID: template_default (or similar)
+    // For now, using the basic 'send' if allowed or standard service/template
+    const response = await emailjs.send('default_service', 'template_qrevisada', templateParams);
+    
+    if (response.status === 200) {
+      showToast('✅ Relatório enviado com sucesso!', 'success');
+      fireConfetti();
+    } else {
+      throw new Error('Falha no envio');
+    }
+  } catch (err) {
+    console.error('EmailJS Error:', err);
+    // Fallback if template is not configured: show the text so student can copy/paste
+    const fallback = confirm('Não foi possível enviar automaticamente. Deseja copiar o relatório para enviar manualmente por WhatsApp ou Email?');
+    if (fallback) {
+      navigator.clipboard.writeText(reportContent);
+      showToast('📋 Relatório copiado para a área de transferência!', 'success');
+    }
+  }
+}
+
 // ========== INITIALIZATION ==========
 window.addEventListener('DOMContentLoaded', () => {
   initParticles();
@@ -1185,6 +1255,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Expose to global for onclick handlers
   window.openMaterialReader = openMaterialReader;
   window.closeMaterialReader = closeMaterialReader;
+  window.sendEmailReport = sendEmailReport; // Expose send function
   
   // Navigation handling
   handleRouting();
