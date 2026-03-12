@@ -3,8 +3,8 @@
 const emailjs = require('emailjs');
 
 const server = emailjs.server.connect({
-    user: 'your_email@example.com', // Your EmailJS email
-    password: 'your_password', // Your EmailJS password
+    user: 'joseproquimica@gmail.com', // Your EmailJS email
+    password: 'jrcastro_01', // Your EmailJS password
     host: 'smtp.emailjs.com',
     ssl: true
 });
@@ -13,7 +13,7 @@ function sendPerformanceReport(studentEmail, reportData) {
     const message = `Hello,
 \nHere is the performance report for the student:\n${reportData}\n\nBest,
 Your Team`;
-    
+
     server.send({
         text: message,
         to: studentEmail,
