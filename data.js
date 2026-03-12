@@ -246,11 +246,11 @@ const TRILHAS = [
       {
         id: "eletro-01",
         youtubeId: "4anogFFC_BI",
-        title: "Revisão: Reações de Oxirredução",
+        title: "Revisão: Número de Oxidação",
         description: "Introdução ao Nox, transferência de elétrons e identificação de agentes.",
         duration: "25 min",
         difficulty: "Essencial",
-        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+        pdfLink: "https://drive.google.com/file/d/1gJXxrlY9WSDT5V2dD5P3FooJCmcuyHmx/preview"
       },
       {
         id: "eletro-02",
