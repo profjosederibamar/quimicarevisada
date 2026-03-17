@@ -31,6 +31,15 @@ const TRILHAS = [
         difficulty: "Essencial",
         pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       }
+    ],
+    resolutions: [
+      {
+        id: "res-atom-01",
+        youtubeId: "vB-oTjI5YwM",
+        title: "Resolução de Questões: Atomística",
+        description: "O professor Josué resolve questões fundamentais sobre modelos atômicos e tabela periódica.",
+        duration: "15 min"
+      }
     ]
   },
   {
@@ -59,6 +68,15 @@ const TRILHAS = [
         difficulty: "Frequente",
         pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       }
+    ],
+    resolutions: [
+      {
+        id: "res-lig-01",
+        youtubeId: "wX85K9Pq2-w",
+        title: "Resolução de Questões: Ligações Químicas",
+        description: "Aprofunde seu conhecimento com a resolução comentada de questões de vestibulares.",
+        duration: "12 min"
+      }
     ]
   },
   {
@@ -77,6 +95,15 @@ const TRILHAS = [
         duration: "30 min",
         difficulty: "Essencial",
         pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      }
+    ],
+    resolutions: [
+      {
+        id: "res-est-01",
+        youtubeId: "mX-qM5s5Bf4",
+        title: "Resolução de Questões: Estequiometria",
+        description: "Cálculos estequiométricos resolvidos detalhadamente para o ENEM.",
+        duration: "20 min"
       }
     ]
   },
@@ -214,6 +241,15 @@ const TRILHAS = [
         difficulty: "Essencial",
         pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       }
+    ],
+    resolutions: [
+      {
+        id: "res-sol-01",
+        youtubeId: "K9pP0QnQ2Gk",
+        title: "Resolução de Questões: Soluções",
+        description: "Passo a passo das principais questões de concentrações e diluições.",
+        duration: "18 min"
+      }
     ]
   },
   {
@@ -232,6 +268,15 @@ const TRILHAS = [
         duration: "28 min",
         difficulty: "Essencial",
         pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      }
+    ],
+    resolutions: [
+      {
+        id: "res-term-01",
+        youtubeId: "uXpQqQpQ2Gk",
+        title: "Resolução de Questões: Termoquímica",
+        description: "Pratique Lei de Hess e Entalpia com questões comentadas pelo professor.",
+        duration: "14 min"
       }
     ]
   },
@@ -261,6 +306,15 @@ const TRILHAS = [
         difficulty: "Frequente",
         pdfLink: "https://drive.google.com/file/d/1AXUPEOGi1GKDbNeEfoA2dClKLICMBGli/preview"
       }
+    ],
+    resolutions: [
+      {
+        id: "res-eletro-01",
+        youtubeId: "yXpQqQpQ2Gk",
+        title: "Resolução de Questões: Eletroquímica",
+        description: "Exercícios de pilhas e eletrólise resolvidos para fixação.",
+        duration: "16 min"
+      }
     ]
   },
   {
@@ -288,6 +342,15 @@ const TRILHAS = [
         duration: "28 min",
         difficulty: "Frequente",
         pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      }
+    ],
+    resolutions: [
+      {
+        id: "res-org-01",
+        youtubeId: "zXpQqQpQ2Gk",
+        title: "Resolução de Questões: Orgânica",
+        description: "Revisão prática de funções e reações orgânicas com exercícios.",
+        duration: "22 min"
       }
     ]
   }

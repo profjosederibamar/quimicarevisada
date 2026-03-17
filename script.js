@@ -248,6 +248,7 @@ function router() {
       (path.startsWith('/trilhas') && route === 'trilhas') ||
       (path.startsWith('/trilha') && route === 'trilhas') ||
       (path.startsWith('/video') && route === 'trilhas') ||
+      (path.startsWith('/resolucoes') && route === 'resolucoes') ||
       (path.startsWith('/simulado') && route === 'simulado') ||
       (path.startsWith('/progresso') && route === 'progresso');
     l.classList.toggle('active', isActive);
@@ -266,8 +267,13 @@ function router() {
     renderVideoPage(app, trailId, videoId);
   } else if (path === '/simulado') {
     renderSimulado(app);
+  } else if (path === '/resolucoes') {
+    renderResolutions(app);
   } else if (path === '/progresso') {
     renderProgresso(app);
+  } else if (path.match(/^\/resolucao\/(.+?)\/(.+)$/)) {
+    const [, trailId, videoId] = path.match(/^\/resolucao\/(.+?)\/(.+)$/);
+    renderVideoPage(app, trailId, videoId, true); // Added fourth param for resolution mode
   } else {
     renderHome(app);
   }
@@ -500,6 +506,13 @@ function renderTrailDetail(container, trailId) {
               </div>
               <span class="trail-progress-text">${progress}% concluído</span>
             </div>
+            ${trail.resolutions?.length > 0 ? `
+              <div style="margin-top: 15px;">
+                <a href="#/resolucoes" class="btn btn-outline btn-sm" style="border-color:${trail.color}; color:${trail.color}; padding: 6px 12px; font-size: 0.85rem;">
+                  <i class="fas fa-video"></i> Ver Resoluções de Questões
+                </a>
+              </div>
+            ` : ''}
           </div>
         </div>
         <div class="video-list">
@@ -536,20 +549,33 @@ function renderTrailDetail(container, trailId) {
 }
 
 // ---------- VIDEO PAGE ----------
-function renderVideoPage(container, trailId, videoId) {
+function renderVideoPage(container, trailId, videoId, isResolution = false) {
   const trail = TRILHAS.find(t => t.id === trailId);
   if (!trail) { navigateTo('/trilhas'); return; }
-  const video = trail.videos.find(v => v.id === videoId);
-  if (!video) { navigateTo(`/trilha/${trailId}`); return; }
+  
+  let video;
+  if (isResolution) {
+    video = trail.resolutions.find(v => v.id === videoId);
+  } else {
+    video = trail.videos.find(v => v.id === videoId);
+  }
+  
+  if (!video) { 
+    if (isResolution) navigateTo('/resolucoes');
+    else navigateTo(`/trilha/${trailId}`); 
+    return; 
+  }
 
-  const questions = VIDEO_QUESTIONS[videoId] || [];
+  const questions = isResolution ? [] : (VIDEO_QUESTIONS[videoId] || []);
   const alreadyDone = state.videosCompleted[videoId];
 
   container.innerHTML = `
     <section class="section page-section">
       <div class="container">
         <div class="page-back">
-          <a href="#/trilha/${trailId}" class="btn-back"><i class="fas fa-arrow-left"></i> ${trail.title}</a>
+          <a href="${isResolution ? '#/resolucoes' : `#/trilha/${trailId}`}" class="btn-back">
+            <i class="fas fa-arrow-left"></i> ${isResolution ? 'Resoluções' : trail.title}
+          </a>
         </div>
 
         <div class="video-page reveal">
@@ -565,11 +591,11 @@ function renderVideoPage(container, trailId, videoId) {
           </div>
 
           <div class="video-page-info">
-            <h1>${video.title}</h1>
+            <h1>${isResolution ? `<span class="badge-res"><i class="fas fa-chalkboard-teacher"></i> Resolução</span> ` : ''}${video.title}</h1>
             <p>${video.description}</p>
             <div class="video-page-meta">
               <span><i class="fas fa-clock"></i> ${video.duration}</span>
-              <span><i class="fas fa-signal"></i> ${video.difficulty}</span>
+              ${!isResolution ? `<span><i class="fas fa-signal"></i> ${video.difficulty}</span>` : ''}
               <span style="color:${trail.color}"><i class="${trail.icon}"></i> ${trail.title}</span>
             </div>
           </div>
@@ -1074,6 +1100,57 @@ function renderProgresso(container) {
         </div>
         ` : ''}
 
+      </div>
+    </section>
+    ${renderFooter()}
+  `;
+  initReveal();
+}
+
+// ---------- RESOLUÇÕES ----------
+function renderResolutions(container) {
+  container.innerHTML = `
+    <section class="section page-section">
+      <div class="container">
+        <div class="page-back">
+          <a href="#/" class="btn-back"><i class="fas fa-arrow-left"></i> Início</a>
+        </div>
+        <div class="section-header reveal">
+          <span class="section-tag"><i class="fas fa-video"></i> Reforço de Aprendizagem</span>
+          <h2>Resolução de <span class="gradient-text">Questões</span></h2>
+          <p class="section-desc">Assista o professor resolvendo questões passo a passo para fixar o conteúdo de cada trilha.</p>
+        </div>
+
+        <div class="resolutions-container">
+          ${TRILHAS.map(trail => {
+            if (!trail.resolutions || trail.resolutions.length === 0) return '';
+            return `
+              <div class="res-trail-group reveal">
+                <div class="res-trail-header">
+                  <div class="res-trail-icon" style="background:${trail.color}15; color:${trail.color}">
+                    <i class="${trail.icon}"></i>
+                  </div>
+                  <h3>${trail.title}</h3>
+                </div>
+                <div class="res-video-grid">
+                  ${trail.resolutions.map(res => `
+                    <a href="#/resolucao/${trail.id}/${res.id}" class="res-video-card">
+                      <div class="res-video-thumb">
+                        <img src="https://img.youtube.com/vi/${res.youtubeId}/mqdefault.jpg" alt="${res.title}">
+                        <div class="res-video-play"><i class="fas fa-play"></i></div>
+                        <div class="res-video-duration">${res.duration}</div>
+                      </div>
+                      <div class="res-video-info">
+                        <h4>${res.title}</h4>
+                        <p>${res.description}</p>
+                      </div>
+                    </a>
+                  `).join('')}
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
       </div>
     </section>
     ${renderFooter()}
