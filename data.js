@@ -30,6 +30,159 @@ const TRILHAS = [
         duration: "22 min",
         difficulty: "Essencial",
         pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      },
+      {
+        id: "atom-03",
+        youtubeId: "YJr65BzgqQE",
+        title: "Estrutura Atômica I Modelos Atômicos: O modelo de Dalton",
+        description: "Abordagem completa sobre o modelo atômico de Dalton.",
+        duration: "11:59",
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      },
+      {
+        id: "atom-04",
+        youtubeId: "Axz-cIMNzl8",
+        title: "Estrutura Atômica II Modelo Atômico de Thomson",
+        description: "Descoberta do elétron e o modelo 'pudim de passas'.",
+        duration: "15:49",
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      },
+      {
+        id: "atom-05",
+        youtubeId: "vmgugJvLjE4",
+        title: "Estrutura Atômica III Experimento de Millikan",
+        description: "A determinação da carga do elétron via gota de óleo.",
+        duration: "10:24",
+        difficulty: "Frequente",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      },
+      {
+        id: "atom-06",
+        youtubeId: "li9viIcWwAY",
+        title: "Estrutura Atômica IV Descoberta dos prótons",
+        description: "Como os prótons foram identificados no núcleo.",
+        duration: "12:56",
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      },
+      {
+        id: "atom-07",
+        youtubeId: "PCh0yU33r2U",
+        title: "Estrutura Atômica V Modelo de Ernest Rutherford",
+        description: "O experimento da folha de ouro e o modelo nuclear.",
+        duration: "17:56",
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      },
+      {
+        id: "atom-08",
+        youtubeId: "U19G4L4xz6Y",
+        title: "Estrutura Atômica VI Descoberta dos nêutrons",
+        description: "A partícula neutra de Chadwick e o núcleo completo.",
+        duration: "15:42",
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      },
+      {
+        id: "atom-09",
+        youtubeId: "OmK6AJPsyts",
+        title: "Estrutura Atômica VII Semelhanças Atômicas",
+        description: "Isótopos, Isóbaros, Isótonos e Isodiáferos.",
+        duration: "15:45",
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      },
+      {
+        id: "atom-10",
+        youtubeId: "0VrBmk0fIjs",
+        title: "Estrutura Atômica VIII Radiação Eletromagnética",
+        description: "Espectro eletromagnético e propriedades da luz.",
+        duration: "16:32",
+        difficulty: "Frequente",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      },
+      {
+        id: "atom-11",
+        youtubeId: "35ToUXw3BFM",
+        title: "Estrutura Atômica IX Fluorescência e Fosforescência",
+        description: "Diferenças entre brilhar no escuro e emitir luz.",
+        duration: "13:24",
+        difficulty: "Frequente",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      },
+      {
+        id: "atom-12",
+        youtubeId: "3RjAqH-MYF8",
+        title: "Estrutura Atômica X Efeito Fotoelétrico",
+        description: "Espectros descontínuos e o início da quântica.",
+        duration: "13:50",
+        difficulty: "Frequente",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      },
+      {
+        id: "atom-13",
+        youtubeId: "-b9DZgThi-k",
+        title: "Estrutura Atômica XI Modelo de Niels Bohr",
+        description: "Postulados de Bohr e a quantização de energia.",
+        duration: "21:05",
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      },
+      {
+        id: "atom-14",
+        youtubeId: "f9l0kp35IP0",
+        title: "Estrutura Atômica XII Modelo de Sommerfeld",
+        description: "Órbitas elípticas e a evolução do átomo de Bohr.",
+        duration: "8:33",
+        difficulty: "Frequente",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      },
+      {
+        id: "atom-15",
+        youtubeId: "MQuptFvx2oc",
+        title: "Estrutura Atômica XIII Mecânica Quântica",
+        description: "Dualidade, Incerteza e o conceito de Orbital.",
+        duration: "11:34",
+        difficulty: "Frequente",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      },
+      {
+        id: "atom-16",
+        youtubeId: "y2N9idQaEGM",
+        title: "Estrutura Atômica XIV Números Quânticos",
+        description: "Descrição completa do estado dos elétrons.",
+        duration: "18:38",
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      },
+      {
+        id: "atom-17",
+        youtubeId: "jyH8XeKERnk",
+        title: "Estrutura Atômica XV Números Quânticos - Parte II",
+        description: "Aprofundamento em spin e magnético.",
+        duration: "11:40",
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      },
+      {
+        id: "atom-18",
+        youtubeId: "B5R08gKKic8",
+        title: "Estrutura Atômica XVI Formas dos Orbitais",
+        description: "Visualização espacial dos orbitais s, p, d e f.",
+        duration: "14:04",
+        difficulty: "Complementar",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
+      },
+      {
+        id: "atom-19",
+        youtubeId: "dVsk69ubFY8",
+        title: "Estrutura Atômica XVII Configurações Eletrônicas",
+        description: "Distribuição eletrônica nos subníveis de energia.",
+        duration: "6:05",
+        difficulty: "Essencial",
+        pdfLink: "https://drive.google.com/file/d/1hV2EDc22_fyY_LKkbP5-fEIYata1u5pJ/preview"
       }
     ],
     resolutions: [
