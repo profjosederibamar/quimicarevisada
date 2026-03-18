@@ -506,6 +506,16 @@ const TRILHAS = [
         duration: "22 min"
       }
     ]
+  },
+  {
+    id: "resolucoes-comentadas",
+    title: "Resoluções Comentadas",
+    icon: "fas fa-video",
+    color: "#ff8c42",
+    hue: 25,
+    description: "Assista a resolução detalhada de questões de todas as trilhas para reforçar seu aprendizado.",
+    videos: [], // Special track, links to resolutions page
+    isSpecial: true
   }
 ];
 

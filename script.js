@@ -98,7 +98,7 @@ function getCompletedVideosCount() {
 }
 
 function getCompletedTrailsCount() {
-  return TRILHAS.filter(t => isTrailComplete(t.id)).length;
+  return TRILHAS.filter(t => !t.isSpecial && isTrailComplete(t.id)).length;
 }
 
 function checkAchievements() {
@@ -113,7 +113,7 @@ function checkAchievements() {
     xp_1000: state.xp >= 1000,
     videos_5: videosCompleted >= 5,
     videos_10: videosCompleted >= 10,
-    all_trails: trailsCompleted === TRILHAS.length,
+    all_trails: trailsCompleted === TRILHAS.filter(t => !t.isSpecial).length,
     simulado_80: state.simuladoHighScore >= 80
   };
 
@@ -387,7 +387,7 @@ function renderHome(container) {
             <span class="stat-label">Concluídos</span>
           </div>
           <div class="stat">
-            <span class="stat-number">${TRILHAS.length}</span>
+            <span class="stat-number">${TRILHAS.filter(t => !t.isSpecial).length}</span>
             <span class="stat-label">Trilhas</span>
           </div>
         </div>
@@ -437,22 +437,31 @@ function renderTrailCard(trail) {
   const total = trail.videos.length;
   const isComplete = progress === 100;
 
+  const isSpecial = trail.id === 'resolucoes-comentadas';
+  const url = isSpecial ? '#/resolucoes' : `#/trilha/${trail.id}`;
+
   return `
-    <a href="#/trilha/${trail.id}" class="trail-card reveal" style="--trail-color:${trail.color}">
+    <a href="${url}" class="trail-card reveal" style="--trail-color:${trail.color}">
       <div class="trail-card-header">
         <div class="trail-icon-wrap" style="background:${trail.color}15;color:${trail.color}">
           <i class="${trail.icon}"></i>
         </div>
-        ${isComplete ? '<div class="trail-complete-badge"><i class="fas fa-check-circle"></i></div>' : ''}
+        ${isComplete && !isSpecial ? '<div class="trail-complete-badge"><i class="fas fa-check-circle"></i></div>' : ''}
       </div>
       <h3>${trail.title}</h3>
       <p>${trail.description}</p>
+      ${!isSpecial ? `
       <div class="trail-progress">
         <div class="trail-progress-bar">
           <div class="trail-progress-fill" style="width:${progress}%;background:${trail.color}"></div>
         </div>
         <span class="trail-progress-text">${completed}/${total} vídeos · ${progress}%</span>
       </div>
+      ` : `
+      <div class="trail-action-hint" style="margin-top: auto; color: ${trail.color}; font-weight: 600; font-size: 0.9rem;">
+        Ir para Resoluções <i class="fas fa-arrow-right"></i>
+      </div>
+      `}
     </a>
   `;
 }
@@ -1056,7 +1065,7 @@ function renderProgresso(container) {
         <div class="progress-trails-section reveal">
           <h3>Progresso por Trilha</h3>
           <div class="progress-trails-list">
-            ${TRILHAS.map(t => {
+            ${TRILHAS.filter(t => !t.isSpecial).map(t => {
               const tp = getTrailProgress(t.id);
               const done = t.videos.filter(v => state.videosCompleted[v.id]).length;
               return `
@@ -1326,7 +1335,7 @@ async function sendEmailReport() {
 
 RESUMO POR TRILHA:
 --------------------------------------------------
-${TRILHAS.map(t => {
+${TRILHAS.filter(t => !t.isSpecial).map(t => {
   const tp = getTrailProgress(t.id);
   const done = t.videos.filter(v => state.videosCompleted[v.id]).length;
   return `• ${t.title}: ${tp}% (${done}/${t.videos.length} vídeos)`;
@@ -1383,7 +1392,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.sendEmailReport = sendEmailReport; // Expose send function
   
   // Navigation handling
-  handleRouting();
-  window.addEventListener('hashchange', handleRouting);
+  router();
+  window.addEventListener('hashchange', router);
 });
 
