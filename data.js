@@ -531,6 +531,15 @@ const TRILHAS = [
         title: "Oxidou ou Reduziu?",
         description: "Revisão final sobre identificação de processos redox.",
         duration: "5:50"
+      },
+      {
+        id: "res-eletro-pilhas-playlist",
+        youtubeId: "_XSiOckEq4o",
+        playlistId: "PL2ieA2EFIpiYkB8QZDwdSQehc53HhX0vj",
+        title: "Playlist: Pilhas e Eletrólise",
+        description: "Sequência completa de resoluções passo a passo sobre pilhas, eletrólise e leis de Faraday.",
+        duration: "17 vídeos",
+        showOnMain: true
       }
     ]
   },
