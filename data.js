@@ -462,18 +462,18 @@ const TRILHAS = [
     ],
     resolutions: [
       {
-        id: "res-eletro-01",
-        youtubeId: "yXpQqQpQ2Gk",
-        title: "Resolução de Questões: Eletroquímica",
-        description: "Exercícios de pilhas e eletrólise resolvidos para fixação.",
-        duration: "16 min"
-      },
-      {
         id: "res-eletro-nox-01",
         youtubeId: "Djv7NCNkiDs",
         title: "NOx: Átomo de Cloro",
         description: "Determine o NOx do átomo de cloro nas substâncias.",
         duration: "5:23"
+      },
+      {
+        id: "res-eletro-01",
+        youtubeId: "yXpQqQpQ2Gk",
+        title: "Resolução de Questões: Eletroquímica",
+        description: "Exercícios de pilhas e eletrólise resolvidos para fixação.",
+        duration: "16 min"
       },
       {
         id: "res-eletro-nox-02",
