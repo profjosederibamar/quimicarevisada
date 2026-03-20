@@ -591,7 +591,7 @@ function renderVideoPage(container, trailId, videoId, isResolution = false) {
           <div class="video-player">
             <iframe 
               id="videoFrame"
-              src="https://www.youtube.com/embed/${video.youtubeId}?enablejsapi=1" 
+              src="https://www.youtube.com/embed/${video.youtubeId}?${video.playlistId ? `list=${video.playlistId}&` : ''}enablejsapi=1" 
               title="${video.title}"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

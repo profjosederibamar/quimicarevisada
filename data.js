@@ -467,6 +467,14 @@ const TRILHAS = [
         title: "Resolução de Questões: Eletroquímica",
         description: "Exercícios de pilhas e eletrólise resolvidos para fixação.",
         duration: "16 min"
+      },
+      {
+        id: "res-eletro-02",
+        youtubeId: "0eAWh42C0eE",
+        playlistId: "PL2ieA2EFIpia33XPFfeIfLcBBAYyB391Y",
+        title: "Playlist: Resoluções de Eletroquímica",
+        description: "Playlist completa com resoluções comentadas de questões de Eletroquímica.",
+        duration: "Playlist"
       }
     ]
   },
