@@ -1169,7 +1169,7 @@ function renderResolutions(container) {
                   <h3>${trail.title}</h3>
                 </div>
                 <div class="res-video-grid">
-                  ${trail.resolutions.map(res => `
+                  ${trail.resolutions.slice(0, 1).map(res => `
                     <a href="#/resolucao/${trail.id}/${res.id}" class="res-video-card">
                       <div class="res-video-thumb">
                         <img src="https://img.youtube.com/vi/${res.youtubeId}/mqdefault.jpg" alt="${res.title}">
