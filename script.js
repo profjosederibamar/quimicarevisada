@@ -587,27 +587,54 @@ function renderVideoPage(container, trailId, videoId, isResolution = false) {
           </a>
         </div>
 
-        <div class="video-page reveal">
-          <div class="video-player">
-            <iframe 
-              id="videoFrame"
-              src="https://www.youtube.com/embed/${video.youtubeId}?${video.playlistId ? `list=${video.playlistId}&` : ''}enablejsapi=1" 
-              title="${video.title}"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-          </div>
+        <div class="video-layout reveal">
+          <div class="video-main">
+            <div class="video-player">
+              <iframe 
+                id="videoFrame"
+                src="https://www.youtube.com/embed/${video.youtubeId}?${video.playlistId ? `list=${video.playlistId}&` : ''}enablejsapi=1" 
+                title="${video.title}"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
 
-          <div class="video-page-info">
-            <h1>${isResolution ? `<span class="badge-res"><i class="fas fa-chalkboard-teacher"></i> Resolução</span> ` : ''}${video.title}</h1>
-            <p>${video.description}</p>
-            <div class="video-page-meta">
-              <span><i class="fas fa-clock"></i> ${video.duration}</span>
-              ${!isResolution ? `<span><i class="fas fa-signal"></i> ${video.difficulty}</span>` : ''}
-              <span style="color:${trail.color}"><i class="${trail.icon}"></i> ${trail.title}</span>
+            <div class="video-page-info">
+              <h1>${isResolution ? `<span class="badge-res"><i class="fas fa-chalkboard-teacher"></i> Resolução</span> ` : ''}${video.title}</h1>
+              <p>${video.description}</p>
+              <div class="video-page-meta">
+                <span><i class="fas fa-clock"></i> ${video.duration}</span>
+                ${!isResolution ? `<span><i class="fas fa-signal"></i> ${video.difficulty}</span>` : ''}
+                <span style="color:${trail.color}"><i class="${trail.icon}"></i> ${trail.title}</span>
+              </div>
             </div>
           </div>
+
+          ${isResolution && trail.resolutions?.length > 1 ? `
+          <aside class="video-sidebar">
+            <div class="sidebar-title">
+              <i class="fas fa-list-ol"></i> Playlist
+            </div>
+            <div class="sidebar-list">
+              ${trail.resolutions.map(res => `
+                <a href="#/resolucao/${trail.id}/${res.id}" class="sidebar-item ${res.id === videoId ? 'active' : ''}">
+                  <div class="sidebar-thumb">
+                    <img src="https://img.youtube.com/vi/${res.youtubeId}/mqdefault.jpg" alt="${res.title}">
+                    ${res.id === videoId ? '<div class="sidebar-active-indicator"><i class="fas fa-play"></i></div>' : ''}
+                  </div>
+                  <div class="sidebar-info">
+                    <h4>${res.title}</h4>
+                    <div class="sidebar-meta">
+                      <span><i class="fas fa-clock"></i> ${res.duration}</span>
+                      ${state.videosCompleted[res.id] ? '<span style="color:var(--accent-1)"><i class="fas fa-check-circle"></i></span>' : ''}
+                    </div>
+                  </div>
+                </a>
+              `).join('')}
+            </div>
+          </aside>
+          ` : ''}
         </div>
 
         ${video.pdfLink ? `

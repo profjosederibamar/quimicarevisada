@@ -469,12 +469,74 @@ const TRILHAS = [
         duration: "16 min"
       },
       {
-        id: "res-eletro-02",
+        id: "res-eletro-nox-01",
+        youtubeId: "Djv7NCNkiDs",
+        title: "NOx: Átomo de Cloro",
+        description: "Determine o NOx do átomo de cloro nas substâncias.",
+        duration: "5:23"
+      },
+      {
+        id: "res-eletro-nox-02",
+        youtubeId: "G5aeIgbD0kM",
+        title: "NOx: Átomo de Enxofre",
+        description: "Determine o NOx do átomo de enxofre nas substâncias.",
+        duration: "4:15"
+      },
+      {
+        id: "res-eletro-nox-03",
+        youtubeId: "B5hpgebspvw",
+        title: "NOx: Átomo de Nitrogênio",
+        description: "Determine o NOx do átomo de nitrogênio nas substâncias.",
+        duration: "3:45"
+      },
+      {
+        id: "res-eletro-nox-04",
+        youtubeId: "BF8T8zi7Xos",
+        title: "NOx: Átomo de Fósforo",
+        description: "Determine o NOx do átomo de fósforo nas substâncias.",
+        duration: "4:30"
+      },
+      {
+        id: "res-eletro-nox-05",
+        youtubeId: "frD6ekd3LSk",
+        title: "Oxidação, Redução e Agentes",
+        description: "Conceitos fundamentais de oxidação, redução e agentes.",
+        duration: "8:12"
+      },
+      {
+        id: "res-eletro-nox-06",
+        youtubeId: "NLB7nXYeyt0",
+        title: "Identificando Oxidação e Redução",
+        description: "Como determinar o elemento que oxida e o que reduz.",
+        duration: "7:45"
+      },
+      {
+        id: "res-eletro-nox-07",
+        youtubeId: "XlVcEKEnb9g",
+        title: "Agentes Oxidante e Redutor I",
+        description: "Prática na identificação de agentes em reações.",
+        duration: "6:30"
+      },
+      {
+        id: "res-eletro-nox-08",
         youtubeId: "0eAWh42C0eE",
-        playlistId: "PL2ieA2EFIpia33XPFfeIfLcBBAYyB391Y",
-        title: "Playlist: Resoluções de Eletroquímica",
-        description: "Playlist completa com resoluções comentadas de questões de Eletroquímica.",
-        duration: "Playlist"
+        title: "Agentes Oxidante e Redutor II",
+        description: "Aprofundamento na descoberta de agentes oxidante e redutor.",
+        duration: "9:15"
+      },
+      {
+        id: "res-eletro-nox-09",
+        youtubeId: "4fLzGa8wcbM",
+        title: "Cálculo de NOx e Agentes",
+        description: "Calculando NOx para descobrir substâncias e agentes.",
+        duration: "10:20"
+      },
+      {
+        id: "res-eletro-nox-10",
+        youtubeId: "es1NZGXBoBw",
+        title: "Oxidou ou Reduziu?",
+        description: "Revisão final sobre identificação de processos redox.",
+        duration: "5:50"
       }
     ]
   },
