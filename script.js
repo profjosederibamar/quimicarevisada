@@ -617,7 +617,7 @@ function renderVideoPage(container, trailId, videoId, isResolution = false) {
               <i class="fas fa-list-ol"></i> Playlist
             </div>
             <div class="sidebar-list">
-              ${trail.resolutions.map(res => `
+              ${trail.resolutions.filter(res => res.playlist === video.playlist).map(res => `
                 <a href="#/resolucao/${trail.id}/${res.id}" class="sidebar-item ${res.id === videoId ? 'active' : ''}">
                   <div class="sidebar-thumb">
                     <img src="https://img.youtube.com/vi/${res.youtubeId}/mqdefault.jpg" alt="${res.title}">
