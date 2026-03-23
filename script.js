@@ -261,7 +261,13 @@ function router() {
     renderTrails(app);
   } else if (path.match(/^\/trilha\/(.+)$/)) {
     const trailId = path.match(/^\/trilha\/(.+)$/)[1];
-    renderTrailDetail(app, trailId);
+    const trail = TRILHAS.find(t => t.id === trailId);
+    if (!trail || trail.videos.length === 0) {
+      navigateTo('/trilhas');
+    } else {
+      const firstVideo = trail.videos.find(v => !state.videosCompleted[v.id]) || trail.videos[0];
+      navigateTo(`/video/${trailId}/${firstVideo.id}`);
+    }
   } else if (path.match(/^\/video\/(.+?)\/(.+)$/)) {
     const [, trailId, videoId] = path.match(/^\/video\/(.+?)\/(.+)$/);
     renderVideoPage(app, trailId, videoId);
@@ -582,10 +588,36 @@ function renderVideoPage(container, trailId, videoId, isResolution = false) {
     <section class="section page-section">
       <div class="container">
         <div class="page-back">
-          <a href="${isResolution ? '#/resolucoes' : `#/trilha/${trailId}`}" class="btn-back">
-            <i class="fas fa-arrow-left"></i> ${isResolution ? 'Resoluções' : trail.title}
+          <a href="${isResolution ? '#/resolucoes' : `#/trilhas`}" class="btn-back">
+            <i class="fas fa-arrow-left"></i> ${isResolution ? 'Resoluções' : 'Trilhas'}
           </a>
         </div>
+
+        ${!isResolution ? `
+        <div class="trail-detail-header reveal" style="margin-bottom: 30px; padding: 24px;">
+          <div class="trail-detail-icon" style="background:${trail.color}15;color:${trail.color}">
+            <i class="${trail.icon}"></i>
+          </div>
+          <div class="trail-detail-info">
+            <h2 style="font-size: 1.4rem;">${trail.title}</h2>
+            <p style="font-size: 0.9rem;">${trail.description}</p>
+            <div class="trail-progress" style="max-width:300px">
+              <div class="trail-progress-bar">
+                <div class="trail-progress-fill" style="width:${getTrailProgress(trail.id)}%;background:${trail.color}"></div>
+              </div>
+              <span class="trail-progress-text">${getTrailProgress(trail.id)}% concluído</span>
+            </div>
+            ${trail.resolutions?.length > 0 ? `
+              <div style="margin-top: 12px;">
+                <a href="#/resolucoes" class="btn btn-outline btn-sm" style="border-color:${trail.color}; color:${trail.color}; padding: 4px 10px; font-size: 0.8rem;">
+                  <i class="fas fa-video"></i> Ver Resoluções de Questões
+                </a>
+              </div>
+            ` : ''}
+          </div>
+        </div>
+        ` : ''}
+
 
         <div class="video-layout reveal">
           <div class="video-main">
