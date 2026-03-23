@@ -611,23 +611,23 @@ function renderVideoPage(container, trailId, videoId, isResolution = false) {
             </div>
           </div>
 
-          ${isResolution && trail.resolutions?.length > 1 ? `
+          ${(isResolution ? trail.resolutions : trail.videos)?.length > 1 ? `
           <aside class="video-sidebar">
             <div class="sidebar-title">
               <i class="fas fa-list-ol"></i> Playlist
             </div>
             <div class="sidebar-list">
-              ${trail.resolutions.filter(res => res.playlist === video.playlist).map(res => `
-                <a href="#/resolucao/${trail.id}/${res.id}" class="sidebar-item ${res.id === videoId ? 'active' : ''}">
+              ${(isResolution ? trail.resolutions.filter(res => res.playlist === video.playlist) : trail.videos).map(v => `
+                <a href="#/${isResolution ? 'resolucao' : 'video'}/${trail.id}/${v.id}" class="sidebar-item ${v.id === videoId ? 'active' : ''}">
                   <div class="sidebar-thumb">
-                    <img src="https://img.youtube.com/vi/${res.youtubeId}/mqdefault.jpg" alt="${res.title}">
-                    ${res.id === videoId ? '<div class="sidebar-active-indicator"><i class="fas fa-play"></i></div>' : ''}
+                    <img src="https://img.youtube.com/vi/${v.youtubeId}/mqdefault.jpg" alt="${v.title}">
+                    ${v.id === videoId ? '<div class="sidebar-active-indicator"><i class="fas fa-play"></i></div>' : ''}
                   </div>
                   <div class="sidebar-info">
-                    <h4>${res.title}</h4>
+                    <h4>${v.title}</h4>
                     <div class="sidebar-meta">
-                      <span><i class="fas fa-clock"></i> ${res.duration}</span>
-                      ${state.videosCompleted[res.id] ? '<span style="color:var(--accent-1)"><i class="fas fa-check-circle"></i></span>' : ''}
+                      <span><i class="fas fa-clock"></i> ${v.duration}</span>
+                      ${state.videosCompleted[v.id] ? '<span style="color:var(--accent-1)"><i class="fas fa-check-circle"></i></span>' : ''}
                     </div>
                   </div>
                 </a>
