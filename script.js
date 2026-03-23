@@ -611,7 +611,7 @@ function renderVideoPage(container, trailId, videoId, isResolution = false) {
             </div>
           </div>
 
-          ${(isResolution ? trail.resolutions : trail.videos)?.length > 1 ? `
+          ${(isResolution ? trail.resolutions.filter(res => res.playlist === video.playlist) : trail.videos)?.length > 0 ? `
           <aside class="video-sidebar">
             <div class="sidebar-title">
               <i class="fas fa-list-ol"></i> Playlist
